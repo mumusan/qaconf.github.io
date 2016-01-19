@@ -42,10 +42,6 @@
 		font-weight: 600;
 	}
 
-	#page {
-		height:10000px;
-	}
-
 	#index > .content {
 		margin: auto;
 		position: relative;
@@ -95,4 +91,11 @@
 		position: absolute;
 		width:100%;
 		top:30%;
+	}
+
+	#speakers_bg {
+		height: 100vh;
+		min-height: 800px;
+		min-width: 1280px;
+		position: relative;
 	}

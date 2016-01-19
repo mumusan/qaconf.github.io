@@ -12,9 +12,9 @@
 	<div id="header">
 		<img id="qaclogo" src="img/qac_mini.png"/>
 		<div class="menu">
-			<div>О конференции</div>
-			<div>Спикеры</div>
-			<div>Сессии</div>
+			<div><a href="index.html">О конференции</a></div>
+			<div><a href="speakers.html">Спикеры</a></div>
+			<div>Сессии</a></div>
 			<div>Контакты</div>
 			<div class="register_button">РЕГИСТРАЦИЯ</div>
 		</div>
@@ -39,17 +39,11 @@
             aspectRatio      = $bg.width() / $bg.height();
 
         function resizeBg() {
-
                 if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-                    $bg
-                        .removeClass()
-                        .addClass('bgheight');
+                    $bg.removeClass().addClass('bgheight');
                 } else {
-                    $bg
-                        .removeClass()
-                        .addClass('bgwidth');
+                    $bg.removeClass().addClass('bgwidth');
                 }
-
         }
 
         theWindow.resize(resizeBg).trigger("resize");
