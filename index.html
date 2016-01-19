@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="header">
-		<img id="qaclogo" src="img/qaclogo.png"/>
+		<img id="qaclogo" src="img/qac_mini.png"/>
 		<div class="menu">
 			<div>О конференции</div>
 			<div>Спикеры</div>
@@ -20,18 +20,20 @@
 		</div>
 	</div>
 	<div id="index">
-		<div id="index_bg"><img class="image_background" src="img/moscow.jpg"/></div>
+		<div id="index_bg"><img id="image_background" class="bgwidth" src="img/moscow.jpg"/></div>
 		<div class="content">
 			<img id="qac_big_logo" src="img/big-logo.png"/>
-			<p class="description">Единственная Российская конференция по тестированию программных систем с привлечением докладчиков самых технологически развитых компаний. 1,000 участников, большие залы, атмосфера знаний</p>
-			<img id="luxoft_index" src="img/luxoft.png"/>
+			<div class="description">
+				<p>Единственная Российская конференция по тестированию программных систем с привлечением докладчиков самых технологически развитых компаний. 1,000 участников, большие залы, атмосфера знаний</p>
+				<img class="logo" src="img/luxoft.png"/>
+			</div>						
 		</div>
 	</div>
 	<script type="text/javascript">
 	$(window).load(function() {    
 
         var theWindow        = $(window),
-            $bg              = $("#index_bg"),
+            $bg              = $("#image_background"),
             aspectRatio      = $bg.width() / $bg.height();
 
         function resizeBg() {
