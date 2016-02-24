@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>QA: Conference</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/highlight.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<img id="qaclogo" src="img/qac_mini.png"/>
+		<div class="menu">
+			<div><a href="index.html">О конференции</a></div>
+			<div><a href="speakers.html">Спикеры</a></div>
+			<div>Сессии</div>
+			<div>Контакты</div>
+			<div class="register_button">РЕГИСТРАЦИЯ</div>
+		</div>
+	</div>
+	<div id="page">
+		<div id="speakers">
+			<div id="speakers_bg"><img id="speakers_background" class="bgwidth" src="img/listeners.jpg"/></div>
+			<div class="content">
+				<div class="title">СПИКЕРЫ</div>
+				<div class="cities">
+					<div>Москва</div>
+					<div>Санкт-Петербург</div>
+					<div>Омск</div>
+					<div>Екатеринбург</div>
+					<div>Новосибирск</div>
+				</div>
+				<div class="speakers_tables">
+					<table>
+						<tbody>
+							<tr>
+								<td class="company_logo"><img src="img/kaspersky.png"/></td>
+								<td class="company_logo"><img src="img/db.png"/></td>
+								<td class="company_logo"><img src="img/luxoft.png"/></td>
+								<td class="company_logo"><img src="img/kaspersky.png"/></td>
+								<td class="company_logo"><img src="img/db.png"/></td>
+								<td class="company_logo"><img src="img/luxoft.png"/></td>
+							</tr>
+							<tr>
+								<td class="speaker_avatar"><img src="img/sidristy.png"/></td>
+								<td class="speaker_avatar"><img src="img/namestnikov.png"/></td>
+								<td class="speaker_avatar"><img src="img/chumakin.png"/></td>
+								<td class="speaker_avatar"><img src="img/sidristy.png"/></td>
+								<td class="speaker_avatar"><img src="img/namestnikov.png"/></td>
+								<td class="speaker_avatar"><img src="img/chumakin.png"/></td>
+							</tr>
+							<tr>
+								<td class="company_description">Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира</td>
+								<td class="company_description">Luxoft - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников</td>
+								<td class="company_description">Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию</td>
+								<td class="company_description">Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира</td>
+								<td class="company_description">Luxoft - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников</td>
+								<td class="company_description">Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(window).load(function() {    
+
+        var theWindow        = $(window),
+            $bg              = $("#speakers_background"),
+            aspectRatio      = $bg.width() / $bg.height();
+
+        function resizeBg() {
+                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+                    $bg.removeClass().addClass('bgheight');
+                } else {
+                    $bg.removeClass().addClass('bgwidth');
+                }
+        }
+
+        theWindow.resize(resizeBg).trigger("resize");
+
+	});
+	</script>
+</body>
+</html>
