@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=1000">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/highlight.css">
+    <!--<link rel="stylesheet" href="css/highlight.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
@@ -21,7 +21,8 @@
 	</div>
 	<div id="page">
 		<div id="index">
-			<div id="index_bg"><img id="image_background" class="bgwidth" src="img/moscow.jpg"/></div>
+            <img id="moscow_sizes" class="invisible" src="img/moscow.jpg"/>
+            <div id="index_bg"></div>
 			<div class="content">
 				<img id="qac_big_logo" src="img/big-logo.png"/>
 				<div class="description">
@@ -35,15 +36,25 @@
 	$(window).load(function() {    
 
         var theWindow        = $(window),
-            $bg              = $("#image_background"),
-            aspectRatio      = $bg.width() / $bg.height();
+            $bg              = $("#index_bg"),
+            aspectRatio      = 1880 / 975; //$bg.width() / $bg.height(); // $bg.width() / $bg.height();
 
         function resizeBg() {
-                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-                    $bg.removeClass().addClass('bgheight');
-                } else {
-                    $bg.removeClass().addClass('bgwidth');
-                }
+
+            var window_width  = theWindow.width(),
+                window_height = theWindow.height(),
+                bg_width = $('moscow_sizes').width(), //$bg.width(),
+                bg_height = $('moscow_sizes').height(); //$bg.height();
+
+            var wdiff = Math.max(window_width, 1024) / bg_width;
+            var hdiff = Math.max(window_height, 800) / bg_height;
+            var ratio = Math.max(wdiff, hdiff);
+
+            var newWidth = Math.min(bg_width * ratio, window_width);
+            var newHeight = Math.min(bg_height * ratio, window_height);
+
+            // растянуть по вертикали, по горизонтали сцентровать
+            $bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
         }
 
         theWindow.resize(resizeBg).trigger("resize");
