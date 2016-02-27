@@ -21,46 +21,194 @@
 	</div>
 	<div id="page">
 		<div id="speakers">
+            <!-- Fullsize invisible copy of background to have its size -->
 			<img id="bg_sizes" class="invisible" src="img/listeners.jpg"/>
+
+            <!-- Real background, with is controlled by JS code (see it at the end of doc  -->
+            <!-- Should to know speakers count at all cities to have one size of BG at all cities -->
 			<div id="speakers_bg"></div>
+
+            <!-- Speakers table -->
 			<div class="content">
-				<div class="title">СПИКЕРЫ</div>
-				<div class="cities">
-					<div>Москва</div>
-					<div>Санкт-Петербург</div>
-					<div>Омск</div>
-					<div>Екатеринбург</div>
-					<div>Новосибирск</div>
-				</div>
-				<div class="speakers_tables">
-					<table>
-						<tbody>
-							<tr>
-								<td class="company_logo"><img src="img/kaspersky.png"/></td>
-								<td class="company_logo"><img src="img/db.png"/></td>
-								<td class="company_logo"><img src="img/luxoft.png"/></td>
-								<td class="company_logo"><img src="img/kaspersky.png"/></td>
-								<td class="company_logo"><img src="img/db.png"/></td>
-								<td class="company_logo"><img src="img/luxoft.png"/></td>
-							</tr>
-							<tr>
-								<td class="speaker_avatar"><img src="img/sidristy.png"/></td>
-								<td class="speaker_avatar"><img src="img/namestnikov.png"/></td>
-								<td class="speaker_avatar"><img src="img/chumakin.png"/></td>
-								<td class="speaker_avatar"><img src="img/sidristy.png"/></td>
-								<td class="speaker_avatar"><img src="img/namestnikov.png"/></td>
-								<td class="speaker_avatar"><img src="img/chumakin.png"/></td>
-							</tr>
-							<tr>
-								<td class="company_description">Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира</td>
-								<td class="company_description">Luxoft - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников</td>
-								<td class="company_description">Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию</td>
-								<td class="company_description">Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира</td>
-								<td class="company_description">Luxoft - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников</td>
-								<td class="company_description">Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию</td>
-							</tr>
-						</tbody>
-					</table>
+				<div id="speakers_title">
+                    <div class="title">ДОКЛАДЧИКИ</div>
+                    <div class="cities">
+                        <a class="choosed" href="#">Москва</a>
+                        <a href="#">Санкт-Петербург</a>
+                        <a href="#">Омск</a>
+                        <a href="#">Екатеринбург</a>
+                        <a href="#">Новосибирск</a>
+                    </div>
+                </div>
+				<div id="speakers_tables">
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/kaspersky.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/chumakin.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Чумакин
+                        </div>
+                        <div class="about">
+                            Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/luxoft.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/sidristyi.png"/>
+                        </div>
+                        <div class="person">
+                            Станислав<br>Сидристый
+                        </div>
+                        <div class="about">
+                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/db.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/namestnikov.png"/>
+                        </div>
+                        <div class="person">
+                            Никита<br>Наместников
+                        </div>
+                        <div class="about">
+                            Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/kaspersky.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/chumakin.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Чумакин
+                        </div>
+                        <div class="about">
+                            Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/luxoft.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/sidristyi.png"/>
+                        </div>
+                        <div class="person">
+                            Станислав<br>Сидристый
+                        </div>
+                        <div class="about">
+                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/db.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/namestnikov.png"/>
+                        </div>
+                        <div class="person">
+                            Никита<br>Наместников
+                        </div>
+                        <div class="about">
+                            Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/kaspersky.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/chumakin.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Чумакин
+                        </div>
+                        <div class="about">
+                            Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/luxoft.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/sidristyi.png"/>
+                        </div>
+                        <div class="person">
+                            Станислав<br>Сидристый
+                        </div>
+                        <div class="about">
+                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/db.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/namestnikov.png"/>
+                        </div>
+                        <div class="person">
+                            Никита<br>Наместников
+                        </div>
+                        <div class="about">
+                            Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/kaspersky.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/chumakin.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Чумакин
+                        </div>
+                        <div class="about">
+                            Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/luxoft.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/sidristyi.png"/>
+                        </div>
+                        <div class="person">
+                            Станислав<br>Сидристый
+                        </div>
+                        <div class="about">
+                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
+                        </div>
+                    </div>
+                    <div class="speaker_entry">
+                        <div class="company">
+                            <img src="img/db.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/namestnikov.png"/>
+                        </div>
+                        <div class="person">
+                            Никита<br>Наместников
+                        </div>
+                        <div class="about">
+                            Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -76,9 +224,9 @@
 			function resizeBg() {
 
 				var window_width  = theWindow.width(),
-						window_height = theWindow.height(),
-						bg_width = moscow_sizes.width(),
-						bg_height = moscow_sizes.height();
+                    window_height = theWindow.height(),
+                    bg_width = moscow_sizes.width(),
+                    bg_height = moscow_sizes.height();
 
 				var wdiff = Math.max(window_width, 1024) / bg_width;
 				var hdiff = Math.max(window_height, 800) / bg_height;
@@ -90,9 +238,33 @@
 				// растянуть по вертикали, по горизонтали сцентровать
 				$bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
 
-				// дополнительн пофиксить шрифт description
-				description.css({"font-size": (16 - 6 * (1-Math.min(wdiff, hdiff)))+"pt"});
-			}
+                var speakers = $("#speakers_tables");
+                var entries = $(".speaker_entry");
+
+                var num_per_row = Math.floor(speakers.width() / 210);
+                var entries_width = (speakers.width() / num_per_row) - 25; // 25 - margins + space
+                var rows = Math.floor(entries.size() / num_per_row);
+                entries.width(entries_width);
+
+                var row = 0, current = 0;
+                for(row = 0; row < rows, current < entries.size(); row++)
+                {
+                    var hh = 0, tmpcur = current;
+                    for(var col = 0; col < num_per_row, tmpcur < entries.size(); col++)
+                    {
+                        hh = Math.max(hh, $(entries[tmpcur]).height());
+                        tmpcur++;
+                    }
+                    tmpcur = current;
+                    for(col = 0; col < num_per_row, tmpcur < entries.size(); col++)
+                    {
+                        $(entries[tmpcur]).height(hh);
+                        tmpcur++;
+                    }
+                    current++;
+                }
+
+        	}
 
 			theWindow.resize(resizeBg).trigger("resize");
 		});
