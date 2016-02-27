@@ -21,7 +21,8 @@
 	</div>
 	<div id="page">
 		<div id="speakers">
-			<div id="speakers_bg"><img id="speakers_background" class="bgwidth" src="img/listeners.jpg"/></div>
+			<img id="bg_sizes" class="invisible" src="img/listeners.jpg"/>
+			<div id="speakers_bg"></div>
 			<div class="content">
 				<div class="title">СПИКЕРЫ</div>
 				<div class="cities">
@@ -65,23 +66,36 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-	$(window).load(function() {    
+		$(window).load(function() {
 
-        var theWindow        = $(window),
-            $bg              = $("#speakers_background"),
-            aspectRatio      = $bg.width() / $bg.height();
+			var theWindow    = $(window),
+				$bg          = $("#speakers_bg"),
+				moscow_sizes = $('#bg_sizes'),
+				description  = $('.description > p');
 
-        function resizeBg() {
-                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-                    $bg.removeClass().addClass('bgheight');
-                } else {
-                    $bg.removeClass().addClass('bgwidth');
-                }
-        }
+			function resizeBg() {
 
-        theWindow.resize(resizeBg).trigger("resize");
+				var window_width  = theWindow.width(),
+						window_height = theWindow.height(),
+						bg_width = moscow_sizes.width(),
+						bg_height = moscow_sizes.height();
 
-	});
+				var wdiff = Math.max(window_width, 1024) / bg_width;
+				var hdiff = Math.max(window_height, 800) / bg_height;
+				var ratio = Math.max(wdiff, hdiff);
+
+				var newWidth = Math.min(bg_width * ratio, window_width);
+				var newHeight = Math.min(bg_height * ratio, window_height);
+
+				// растянуть по вертикали, по горизонтали сцентровать
+				$bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
+
+				// дополнительн пофиксить шрифт description
+				description.css({"font-size": (16 - 6 * (1-Math.min(wdiff, hdiff)))+"pt"});
+			}
+
+			theWindow.resize(resizeBg).trigger("resize");
+		});
 	</script>
 </body>
 </html>
