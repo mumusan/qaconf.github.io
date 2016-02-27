@@ -26,7 +26,8 @@
 			<div class="content">
 				<img id="qac_big_logo" src="img/big-logo.png"/>
 				<div class="description">
-					<p>Единственная Российская конференция по тестированию программных систем с привлечением докладчиков самых технологически развитых компаний. 1,000 участников, большие залы, атмосфера знаний</p>
+					<p>Крупнейшая Российская конференция по тестированию программных систем с привлечением докладчиков самых технологически развитых компаний.
+                       <br> 1,000 участников, большие залы, атмосфера знаний</p>
 					<img class="logo" src="img/luxoft.png"/>
 				</div>						
 			</div>
@@ -35,16 +36,17 @@
 	<script type="text/javascript">
 	$(window).load(function() {    
 
-        var theWindow        = $(window),
-            $bg              = $("#index_bg"),
-            aspectRatio      = 1880 / 975; //$bg.width() / $bg.height(); // $bg.width() / $bg.height();
+        var theWindow    = $(window),
+            $bg          = $("#index_bg"),
+            moscow_sizes = $('#moscow_sizes'),
+            description  = $('.description > p');
 
         function resizeBg() {
 
             var window_width  = theWindow.width(),
                 window_height = theWindow.height(),
-                bg_width = $('moscow_sizes').width(), //$bg.width(),
-                bg_height = $('moscow_sizes').height(); //$bg.height();
+                bg_width = moscow_sizes.width(),
+                bg_height = moscow_sizes.height();
 
             var wdiff = Math.max(window_width, 1024) / bg_width;
             var hdiff = Math.max(window_height, 800) / bg_height;
@@ -55,10 +57,12 @@
 
             // растянуть по вертикали, по горизонтали сцентровать
             $bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
+
+            // дополнительн пофиксить шрифт description
+            description.css({"font-size": (16 - 6 * (1-Math.min(wdiff, hdiff)))+"pt"});
         }
 
         theWindow.resize(resizeBg).trigger("resize");
-
 	});
 	</script>
 </body>
