@@ -9,16 +9,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img id="qaclogo" src="img/qac_mini.png"/>
-		<div class="menu">
-			<div><a href="index.html">О конференции</a></div>
-			<div><a href="speakers.html">Спикеры</a></div>
-			<div>Сессии</div>
-			<div>Контакты</div>
-			<div class="register_button">РЕГИСТРАЦИЯ</div>
-		</div>
-	</div>
+    <div id="header">
+        <img id="qaclogo" src="img/qac_mini.png"/>
+        <div class="menu">
+            <div><a href="index.html">О конференции</a></div>
+            <div><a href="speakers.html">Спикеры</a></div>
+            <div>Сессии</div>
+            <div>Контакты</div>
+            <div class="register_button">РЕГИСТРАЦИЯ</div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="description">
+            Все наши спикеры выступают с самыми современными докладами и даруют людям самые последние знания
+            которые помогут любому слушателю стать еще более профессиональным и высокооплачиемым специалистом
+        </div>
+        <div class="speakers_welcome">
+            <div class="speakers_button">СТАТЬ СПИКЕРОМ</div>
+        </div>
+    </div>
 	<div id="page">
 		<div id="speakers">
             <!-- Fullsize invisible copy of background to have its size -->
@@ -242,7 +251,7 @@
                 var entries = $(".speaker_entry");
 
                 var num_per_row = Math.floor(speakers.width() / 210);
-                var entries_width = (speakers.width() / num_per_row) - 25; // 25 - margins + space
+                var entries_width = (speakers.width() / num_per_row) - 30; // 25 - margins + space
                 var rows = Math.floor(entries.size() / num_per_row);
                 entries.width(entries_width);
 

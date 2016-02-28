@@ -12,17 +12,53 @@
 		min-height: 800px;
 	}
 
-	#header {
-		height:111px;
-	    background-image: url(../img/header_gradient.png);
-	    background-repeat: repeat;
-		position:fixed; 
-		top:0px; 
-		margin:auto; 
-		z-index:100000; 
-		width: 100vw;
-		min-width: 1024px;
-	}
+    #header {
+        height:111px;
+        background-image: url(../img/header_gradient.png);
+        background-repeat: repeat;
+        position:fixed;
+        top:0px;
+        margin:auto;
+        z-index:100000;
+        width: 100vw;
+        min-width: 1024px;
+    }
+
+    #footer {
+        height:111px;
+        background-image: url(../img/header_gradient.png);
+        background-repeat: repeat;
+        position:fixed;
+        bottom:0px;
+        margin:auto;
+        z-index:100000;
+        width: 100vw;
+        min-width: 1024px;
+    }
+
+    #footer .description {
+        display: block;
+        position: absolute;
+        left: 0;
+        margin-top: 30px;
+        width: 75%;
+        height: 100%;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        color: white;
+        font-size: 13pt;
+        font-weight: 400;
+        text-align: right;
+        vertical-align: middle;
+    }
+
+    #footer .speakers_welcome {
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-top: 30px;
+        width: 25%;
+        height: 100%;
+    }
 
 	#header > .menu {
 	    float: right;
@@ -50,6 +86,18 @@
 	.register_button {
 		padding: 10px;
 		background-color: #664e88;
+		font-weight: 600;
+	}
+
+	.speakers_button {
+        display: inline-block;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        width: auto;
+        padding: 15px 60px;
+        margin-left: 40px;
+        color: white;
+		background-color: #f85163;
+        font-size: 16pt;
 		font-weight: 600;
 	}
 
