@@ -209,16 +209,17 @@
 	#speakers_title > .title {
 		position: absolute;
 		left: 0px;
+        bottom: 0px;
 		font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
 		color: white;
-		font-size: 50pt;
+		font-size: 3.7vw; /*50pt;*/
 		font-weight: 700;
 	}
 
     #speakers_title > .cities {
         position: absolute;
         right: 0px;
-        bottom: 25px;
+        bottom: 0.8vw; /*15px;*/
     }
 
 	.cities a {
@@ -226,7 +227,7 @@
 		font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
 		text-decoration: none;
 		color: white;
-		font-size: 16pt;
+		font-size: 1.3vw; /*16pt;*/
 		font-weight: 300;
 		margin: 0px 6px;
 	}
@@ -242,7 +243,7 @@
 		top: 130px;
 	}
 
-    @media (max-width: 1600px) {
+    @media (max-width: 1200px) {
 
         #speakers_tables {
             top: 160px;
@@ -254,13 +255,21 @@
         }
 
         #speakers_title .title {
+            font-size: 50pt;
+            font-weight: 700;
             width: 100%;
+            bottom: 30px;
         }
 
         #speakers_title > .cities {
             position: absolute;
+            font-size: 16pt;
+            font-weight: 300;
             left: 0px;
             bottom: 0px;
+        }
+        #speakers_title > .cities a {
+            font-size: 16pt;
         }
     }
 
