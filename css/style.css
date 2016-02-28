@@ -250,6 +250,11 @@
 
         #speakers_title {
             height: 130px;
+            text-align: center;
+        }
+
+        #speakers_title .title {
+            width: 100%;
         }
 
         #speakers_title > .cities {
