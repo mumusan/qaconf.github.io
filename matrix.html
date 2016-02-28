@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>QA: Conference</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/highlight.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="header">
+    <img id="qaclogo" src="img/qac_mini.png"/>
+    <div class="menu">
+        <div><a href="index.html">О конференции</a></div>
+        <div><a href="speakers.html">Спикеры</a></div>
+        <div>Сессии</div>
+        <div>Контакты</div>
+        <div class="register_button">РЕГИСТРАЦИЯ</div>
+    </div>
+</div>
+<div id="footer">
+</div>
+<div id="page">
+    <div id="matrix">
+        <!-- Fullsize invisible copy of background to have its size -->
+        <img id="bg_sizes" class="invisible" src="img/matrix_bg.jpg"/>
+
+        <!-- Real background, with is controlled by JS code (see it at the end of doc  -->
+        <!-- Should to know speakers count at all cities to have one size of BG at all cities -->
+        <div id="matrix_bg"></div>
+
+        <!-- Speakers table -->
+        <div class="content">
+            <div id="matrix_title">
+                <div class="title">ДОКЛАДЫ</div>
+                <div class="cities">
+                    <a class="choosed" href="#">Москва</a>
+                    <a href="#">Санкт-Петербург</a>
+                    <a href="#">Омск</a>
+                    <a href="#">Екатеринбург</a>
+                    <a href="#">Новосибирск</a>
+                </div>
+            </div>
+
+            <div id="matrix_table">
+
+                <!--
+                  --  ЗАЛ №1 им Ады Лавлейс
+                  -->
+                <div class="row">
+                    <div class="mini_avatar_room">
+                        <img src="img/ada_left.jpg" />
+                    </div>
+                    <div class="room_description">
+                        <p><span class="hall">Зал</span><br>им. Ады Левлейс</p>
+                    </div>
+                    <div class="presentations">
+                        <div class="entry">
+                            <p class="time">
+                                09<sup>00</sup> - 10<sup>30</sup>
+                            </p>
+                            <div class="presentation-text">
+                                Паттерны и антипаттерны Cucumber-based BDD проектов: стандартизация огуречного кода.
+                            </div>
+                            <div class="author">
+                                <img src="img/namestnikov.png"/>
+                                <p class="author-name">Станислав Сидристый</p>
+                                <p class="company">Deutsche Bank</p>
+                            </div>
+                        </div>
+                        <div class="entry">
+                            <p class="time">
+                                10<sup>30</sup> - 12<sup>00</sup>
+                            </p>
+                            <div class="presentation-text">
+                                Паттерны и антипаттерны Cucumber-based BDD проектов
+                            </div>
+                            <div class="author">
+                                <img src="img/namestnikov.png"/>
+                                <p class="author-name">Станислав Сидристый</p>
+                                <p class="company">Luxoft</p>
+                            </div>
+                        </div>
+                        <div class="entry">
+                            <p class="time">
+                                09<sup>00</sup> - 10<sup>30</sup>
+                            </p>
+                            <div class="presentation-text">
+                                Паттерны и антипаттерны Cucumber-based BDD проектов
+                            </div>
+                            <div class="author">
+                                <img src="img/namestnikov.png"/>
+                                <p class="author-name">Станислав Сидристый</p>
+                                <p class="company">Kaspersky</p>
+                            </div>
+                        </div>
+                        <div class="entry">
+                            <p class="time">
+                                10<sup>30</sup> - 12<sup>00</sup>
+                            </p>
+                            <div class="presentation-text">
+                                Паттерны и антипаттерны Cucumber-based BDD проектов
+                            </div>
+                            <div class="author">
+                                <img src="img/namestnikov.png"/>
+                                <p class="author-name">Станислав Сидристый</p>
+                                <p class="company">PentestIt</p>
+                            </div>
+                        </div>
+                        <div class="entry">
+                            <p class="time">
+                                09<sup>00</sup> - 10<sup>30</sup>
+                            </p>
+                            <div class="presentation-text">
+                                Паттерны и антипаттерны Cucumber-based BDD проектов
+                            </div>
+                            <div class="author">
+                                <img src="img/namestnikov.png"/>
+                                <p class="author-name">Станислав Сидристый</p>
+                                <p class="company">Сбербанк</p>
+                            </div>
+                        </div>
+                        <div class="entry">
+                            <p class="time">
+                                10<sup>30</sup> - 12<sup>00</sup>
+                            </p>
+                            <div class="presentation-text">
+                                Паттерны и антипаттерны Cucumber-based BDD проектов
+                            </div>
+                            <div class="author">
+                                <img src="img/namestnikov.png"/>
+                                <p class="author-name">Станислав Сидристый</p>
+                                <p class="company">Коддан Тех.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="descriptions">
+
+                    </div>
+                    <div class="avatar_room">
+                        <img src="img/ada_right.jpg" />
+                    </div>
+                </div>
+
+                <!--
+                  --  ЗАЛ №2 им Дональда Кнута
+                  -->
+                <div class="row">
+                    <div class="mini_avatar_room">
+                        <img src="img/knut_left.jpg" />
+                    </div>
+                    <div class="room_description">
+                        <p><span class="hall">Зал</span><br>им. Дональда Кнута</p>
+                    </div>
+                    <div class="presentations">
+
+                    </div>
+                    <div class="descriptions">
+
+                    </div>
+                    <div class="avatar_room">
+                        <img src="img/knut_right.jpg" />
+                    </div>
+                </div>
+
+                <!--
+                  --  ЗАЛ №3 им. Брюса Шнайера
+                  -->
+                <div class="row">
+                    <div class="mini_avatar_room">
+                        <img src="img/ada_left.jpg" />
+                    </div>
+                    <div class="room_description">
+                        <p><span class="hall">Зал</span><br>им. Брюса Шнейера</p>
+                    </div>
+                    <div class="presentations">
+
+                    </div>
+                    <div class="descriptions">
+
+                    </div>
+                    <div class="avatar_room">
+                        <img src="img/ada_right.jpg" />
+                    </div>
+                </div>
+
+
+                <!--
+                  --  ЗАЛ №4 аудиторный
+                  -->
+                <div class="row">
+                    <div class="mini_avatar_room">
+                        <img src="img/knut_left.jpg" />
+                    </div>
+                    <div class="room_description">
+                        <p><span class="hall">Зал</span><br>им. Брюса Шнейера</p>
+                    </div>
+                    <div class="presentations">
+
+                    </div>
+                    <div class="descriptions">
+
+                    </div>
+                    <div class="avatar_room">
+                        <img src="img/knut_right.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(window).load(function() {
+
+        var theWindow    = $(window),
+                $bg          = $("#matrix_bg"),
+                moscow_sizes = $('#bg_sizes'),
+                description  = $('.description > p');
+
+        function resizeBg() {
+
+            var window_width  = theWindow.width(),
+                    window_height = theWindow.height(),
+                    bg_width = moscow_sizes.width(),
+                    bg_height = moscow_sizes.height();
+
+            var wdiff = Math.max(window_width, 1024) / bg_width;
+            var hdiff = Math.max(window_height, 800) / bg_height;
+            var ratio = Math.max(wdiff, hdiff);
+
+            var newWidth = Math.min(bg_width * ratio, window_width);
+            var newHeight = Math.min(bg_height * ratio, window_height);
+
+            // растянуть по вертикали, по горизонтали сцентровать
+            $bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
+        }
+
+        theWindow.resize(resizeBg).trigger("resize");
+    });
+</script>
+</body>
+</html>
