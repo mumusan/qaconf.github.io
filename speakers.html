@@ -314,6 +314,17 @@
 				moscow_sizes = $('#bg_sizes'),
 				description  = $('.description > p');
 
+            function placeBackgroundOnScroll(){
+                var $bgobj = $(this); // создаем объект
+                theWindow.scroll(function() {
+                    var yPos = -(theWindow.scrollTop() / theWindow.height() * ($bgobj.height()-200)/2); // вычисляем коэффициент
+                    // Присваиваем значение background-position
+                    var coords = 'center '+ yPos + 'px';
+                    // Создаем эффект Parallax Scrolling
+                    $bgobj.css({ backgroundPosition: coords });
+                });
+            }
+
 			function resizeBg() {
 
 				var window_width  = theWindow.width(),
@@ -331,11 +342,12 @@
 				// растянуть по вертикали, по горизонтали сцентровать
 				$bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
 
+                // поставить на места таблицу спикеров
                 var speakers = $("#speakers_tables");
                 var entries = $(".speaker_entry");
 
                 var num_per_row = Math.floor(speakers.width() / 210);
-                var entries_width = (speakers.width() / num_per_row) - 30; // 25 - margins + space
+                var entries_width = (speakers.width() / num_per_row) - 25; // 25 - margins + space
                 var rows = Math.floor(entries.size() / num_per_row);
                 entries.width(entries_width);
 
@@ -358,6 +370,8 @@
                 }
 
         	}
+
+            //$bg.each(placeBackgroundOnScroll);
 
 			theWindow.resize(resizeBg).trigger("resize");
 		});
