@@ -215,11 +215,11 @@
 		font-weight: 700;
 	}
 
-	#speakers_title > .cities {
-		position: absolute;
-		right: 0px;
-		bottom: 25px;
-	}
+    #speakers_title > .cities {
+        position: absolute;
+        right: 0px;
+        bottom: 25px;
+    }
 
 	.cities a {
 		text-align: right;
@@ -241,6 +241,23 @@
 		position: absolute;
 		top: 130px;
 	}
+
+    @media (max-width: 1600px) {
+
+        #speakers_tables {
+            top: 160px;
+        }
+
+        #speakers_title {
+            height: 130px;
+        }
+
+        #speakers_title > .cities {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+    }
 
 	#speakers_tables .speaker_entry {
 		float:left;
