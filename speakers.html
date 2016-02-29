@@ -42,15 +42,15 @@
 				<div id="speakers_title">
                     <div class="title">ДОКЛАДЧИКИ</div>
                     <div class="cities">
-                        <a class="choosed" href="#">Москва</a>
-                        <a href="#">Санкт-Петербург</a>
-                        <a href="#">Омск</a>
-                        <a href="#">Екатеринбург</a>
-                        <a href="#">Новосибирск</a>
+                        <a id="msk-link" class="choosed" href="#">Москва</a>
+                        <a id="spb-link" href="#">Санкт-Петербург</a>
+                        <a id="omsk-link" href="#">Омск</a>
+                        <a id="eka-link" href="#">Екатеринбург</a>
+                        <a id="nsk-link" href="#">Новосибирск</a>
                     </div>
                 </div>
 				<div id="speakers_tables">
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk nsk">
                         <div class="company">
                             <img src="img/sber.png"/>
                         </div>
@@ -64,7 +64,7 @@
                             Начальник Управления тестирования банковских систем <span class="company_bold">Сбербанк Технологии</span>. В тестировании с 2002 года. Работала в «гигантах» ИТ телекома и банкинга: CBOSS, Luxoft, Ситроникс Телеком Солюшнс. Прошла профессиональный путь от «работы руками» до выстраивания работы команд/подразделений
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb omsk eka nsk">
                         <div class="company">
                             <img src="img/luxoft.png"/>
                         </div>
@@ -78,7 +78,7 @@
                             Архитектор решений компании <span class="company_bold">Luxoft</span>. Участвовал в многих проектах компании, занимался как разработкой, так и автоматизацией тестирования как .NET/WPF приложений, так и Java/Groovy Web приложений. Разрабатывал для огромного спектра платформ, руководил как разработкой так и тестированием.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk eka">
                         <div class="company">
                             <img src="img/pentestit.png"/>
                         </div>
@@ -92,7 +92,7 @@
                             Генеральный директор компании <span class="company_bold">Pentestit</span> и ведущий специалист в области безопастности программного обеспечения, докладчик на многих международных конференциях по взлому и защите программных систем. Хакер, в хорошем смысле этого слова.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk eka">
                         <div class="company">
                             <img src="img/pentestit.png"/>
                         </div>
@@ -106,7 +106,7 @@
                             Технический директор компании <span class="company_bold">Pentestit</span>, рупор знаний в российском сегменте Интернета по безопастности и защите от взлома. Автор сотен статей, авктивнейший докладчик на международных форумах и конфренциях. Эксперт в своем деле.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb nsk">
                         <div class="company">
                             <img src="img/epam.png"/>
                         </div>
@@ -120,7 +120,7 @@
                             Chief QA Automation и евангелист в компании <span class="company_bold">EPAM</span>. Посчастливилось поучаствовать в различных конференциях таких как SQA Days, Agile Days, IT Week, IT Subbotnik и EuroStar. Автор фреймворка для автомтаизированного тетсиования VIQA и набора утилит для DDT (VIQA TDG - test data generator).
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb omsk">
                         <div class="company">
                             <img src="img/rmbit.png"/>
                         </div>
@@ -134,7 +134,7 @@
                             Инженер с богатым опытом поднятия процессов тестирования и автоматизации тестирования. Всесторонне участвовал в создании, тестировании и выпуске высоконагруженных приложений для крупнейших заказчиков - от Ericson'а до МинЗдрава РФ, руководитель отдела тестирования
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry spb">
                         <div class="company">
                             <img src="img/here.png"/>
                         </div>
@@ -148,7 +148,7 @@
                             Старший специалист по тестированию в компании <span class="company_bold">HERE</span> - ведущем провайдере карт. Сервера компании ежедневно (!) прогоняют до 60 тысяч тестов - для различных автопроизводителей, на различных операционных сестемах, под управлением единой системы контроля   автоматизации тестирования.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk">
                         <div class="company">
                             <img src="img/yandex.png"/>
                         </div>
@@ -162,7 +162,7 @@
                             В <span class="company_bold">Яндексе</span> 4 года, занимается нагрузочным тестированием, разработкой инструментов и экспериментами в области производительности. Ведет open-source проекты <a href="https://github.com/yandex/yandex-tank">Яндекс.Танк</a> и <a href="https://github.com/yandex/pandora">Pandora</a>
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk">
                         <div class="company">
                             <img src="img/parallels.png"/>
                         </div>
@@ -176,7 +176,7 @@
                             Ведущий инженер по тестированию в компании <span class="company_bold">Parallels (Virtuozzo)</span> - ведущем разработчике средств автоматизации виртаулизации. Работал вплотную с такими инфраструктурными проектами Openstack которые могут потенциально быть полезны для развертывания CI систем: Zuul, Nodepool, diskimage-builder
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb">
                         <div class="company">
                             <img src="img/kaspersky.png"/>
                         </div>
@@ -190,7 +190,7 @@
                             Ведущий инженер в Лаборатории Касперского и Microsoft ALM Ranger. За последний год был докладчиком на 5 конференциях Microsoft (в том числе и DevCon). Рассказывал в основном про автоматизированное тестирование в .NET и ALM. Пишу иногда на Хабре и  MSDN (мои статьи можно найти по тегу mstesting)
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb omsk nsk">
                         <div class="company">
                             <img src="img/sber.png"/>
                         </div>
@@ -204,7 +204,7 @@
                             Основное мое достижение - это то, что автоматизация стала пользоваться спросом со стороны отделов и управлений функционального тестирования. Разработанная при моем непосредственном участии новая технологическая платформа - BDD автотесты, java, selenium, appium, позволила значительно ускорить выполнение автотестов, снизить затраты на поддержку и самое главное - она удобна в использовании ручными тестировщиками
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk">
                         <div class="company">
                             <img src="img/sber.png"/>
                         </div>
@@ -218,7 +218,7 @@
                             Работал на различных проектах: системы управления рисками, торговые платформы для больших банков и eCommerce решения для больших торговых платформ. Имею большой опыт работы с BDD инструментами, такими как JBehave, Cucumber. Выступаю в качестве ментора и лектора на различных мероприятиях. Выступал в качестве докладчика на QAFest 2015.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry spb">
                         <div class="company">
                             <img src="img/cifratech.png"/>
                         </div>
@@ -232,7 +232,7 @@
                             Старший инженер по интеграции системы условного доступа (СУД) в ПО сторонних разработчиков. Организовал и настроил стенд нагрузочного тестирования, позволяющий одновременно тестировать до 16 различных приёмников. Подготовил к сертификации не менее 25 принципиально разных модификаций приемников. Сертифицировал не менее 50 релизов для них. Участник нескольких ИТ конференций, а также международных выставок в области
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry spb">
                         <div class="company">
                             <img src="img/dins.png"/>
                         </div>
@@ -246,7 +246,7 @@
                             В настоящий момент управляет и развивает проект Global Continues Integration. В тестировании 12 лет. Работал в компаниях: Quest Software (Dell), I-Free, с 2011 года работает в Dino Systems (DINS). Приходилось использовать практически все методы тестирования, включая исследовательское, тестривание производительности и даже мутационное. Не обошлось и без создания своих Frameworks.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk eka">
                         <div class="company">
                             <img src="img/cit.png"/>
                         </div>
@@ -260,7 +260,7 @@
                             Участвовал в разработке автотестов интеграционных шин для организации внутриведомственного, межведомственного, а также для межгосударственного электронного взаимодействия в рамках Евразийской Экономической Комиссии. Занимался настройкой и тестированим отказоустойчивых конфигураций для серверов БД, серверов приложений и служб обмена данными.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb">
                         <div class="company">
                             <img src="img/helmes.png"/>
                         </div>
@@ -274,7 +274,7 @@
                             Ведущий специалист по автоматизированному тестированию в компании Helmes. Прекрасно владеет и обладает обширным багажом знаний в инструментах: Ranorex, Selenium Webdriver, Sikuli, AutoIt, Sahi, Cucumber (и ему подобных BDD-технологий) и множеством других инструментов для автоматизированного тестирования Web, UI, Java, DB, back-end, performance приложений.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry spb nsk">
                         <div class="company">
                             <img src="img/trk.png"/>
                         </div>
@@ -288,7 +288,7 @@
                             Руководитель отдела обеспечения качества СПО. За 9 лет получил опыт ручного тестирования, автоматизации, performance/load, usability, penetration и прочих видов тестирования. Обучал персонал автоматизации. Построил отдел тестирования с нуля, который с успехом справляется с задачами и приносит большую пользу компании. Параллельно с этой областью вот уже 5 лет занимаюсь разработкой проффесионального ПО для радиолюбителей Zeus Radio
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk">
                         <div class="company">
                             <img src="img/neoflex.png"/>
                         </div>
@@ -300,6 +300,48 @@
                         </div>
                         <div class="about">
                             Выполняет роль архитектора на интеграционных проектах. Последние несколько лет работает над одним из крупнейших интеграционных проектов УСБС. Является идейным вдохновителем и архитектором системы для автоматизации тестирования интеграционных проектов
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk eka">
+                        <div class="company">
+                            <img src="img/tamtek.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/bobrova.png"/>
+                        </div>
+                        <div class="person">
+                            Екатерина<br>Боброва
+                        </div>
+                        <div class="about">
+                            Ведущий инженер по тестированию, занимается ручным и автоматизированных тестированием, обучением стажеров. В основном работает на backend проектах и проектах со сложной структурой, занимаюсь детализацией требований, разработкой и поддержанием тестовой документации, написанием, поддержкой и CI для автотестов, ручным тестирвоанием.
+                        </div>
+                    </div>
+                    <div class="speaker_entry nsk">
+                        <div class="company">
+                            <img src="img/magora.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/belev.png"/>
+                        </div>
+                        <div class="person">
+                            Алексей<br>Белев
+                        </div>
+                        <div class="about">
+                            За время недолгой работы в команде, вывел тестирование и контроль качества на новый уровень. Процент поиска багов вырос с 67% до 89%. Обучил отдел продаж как надо и как не надо продавать тестирование (результатом стала продажа автоматизированного тестирования в нескольких крупных проектах). Продвинул автоматизацию в компании, настоял на обучении сотрудников основам автоматизации и программирования ( на данный момент 75% отдела умеют на должном уровне пользоваться инструментами автоматизации)
+                        </div>
+                    </div>
+                    <div class="speaker_entry nsk">
+                        <div class="company">
+                            <img src="img/magora.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/macivecky.png"/>
+                        </div>
+                        <div class="person">
+                            Михаил<br>Мациевский
+                        </div>
+                        <div class="about">
+                            Бывший C# Dev, ныне переквалифицировался в специалиста тестирования. Привёл в порядок существующий, структурировал и разработал собственный фреймворк работы, основанный на Selenium и Selenide. Совместно c Алексеем подняли полную схему автоматизации (Github, bitbucket репозитории -> CIS(teamcity, Jenkins) -> Testlink -> отчёт на почте с результатами). На данный момент занимается разработкой фреймворка на основе Appium для автоматизации тестирования мобильных платформ.
                         </div>
                     </div>
 				</div>
@@ -371,8 +413,48 @@
 
         	}
 
+            function showMoscowOnly() {
+                $('.omsk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#msk-link').addClass('choosed');
+                $('.msk').css({'display':'block'});
+            }
+
+            function showSpbOnly() {
+                $('.omsk,.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#spb-link').addClass('choosed');
+                $('.spb').css({'display':'block'});
+            }
+
+            function showOmskOnly() {
+                $('.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#omsk-link').addClass('choosed');
+                $('.omsk').css({'display':'block'});
+            }
+
+            function showEkaOnly() {
+                $('.omsk,.msk,.nsk,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#eka-link').addClass('choosed');
+                $('.eka').css({'display':'block'});
+            }
+
+            function showNskOnly() {
+                $('.omsk,.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#nsk-link').addClass('choosed');
+                $('.nsk').css({'display':'block'});
+            }
+
             $('#speakers > .content').css({"display":"block"});
 			theWindow.resize(resizeBg).trigger("resize");
+            $('#msk-link').on('click', showMoscowOnly);
+            $('#spb-link').on('click', showSpbOnly);
+            $('#omsk-link').on('click', showOmskOnly);
+            $('#nsk-link').on('click', showNskOnly);
+            $('#eka-link').on('click', showEkaOnly);
 		});
 	</script>
 </body>
