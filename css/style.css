@@ -36,6 +36,11 @@
         min-width: 1024px;
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
     #footer .description {
         display: block;
         position: absolute;
