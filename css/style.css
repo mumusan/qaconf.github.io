@@ -425,6 +425,7 @@
         height: auto;
         margin-top: 25px;
         background-image: url("../img/matrix_bg.png");
+        background-position: 24px ;
     }
 
     #matrix_table > .row {
@@ -468,7 +469,7 @@
     .presentations {
         position: absolute;
         display: block;
-        left: 160px;
+        left: 180px;
         height: 310px;
     }
 
