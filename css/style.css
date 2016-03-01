@@ -13,6 +13,7 @@
 	}
 
     #header {
+        pointer-events: none;
         height:111px;
         background-image: url(../img/header_gradient.png);
         background-repeat: repeat;
