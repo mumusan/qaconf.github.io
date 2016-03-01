@@ -385,7 +385,7 @@
 
                 // поставить на места таблицу спикеров
                 var speakers = $("#speakers_tables");
-                var entries = $(".speaker_entry");
+                var entries = $(".speaker_entry:visible");
 
                 var num_per_row = Math.floor(speakers.width() / 210);
                 var entries_width = (speakers.width() / num_per_row) - 25; // 25 - margins + space
@@ -417,6 +417,7 @@
                 $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
                 $('#msk-link').addClass('choosed');
                 $('.msk').css({'display':'block'});
+                resizeBg();
             }
 
             function showSpbOnly() {
@@ -424,6 +425,7 @@
                 $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
                 $('#spb-link').addClass('choosed');
                 $('.spb').css({'display':'block'});
+                resizeBg();
             }
 
             function showOmskOnly() {
@@ -431,6 +433,7 @@
                 $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
                 $('#omsk-link').addClass('choosed');
                 $('.omsk').css({'display':'block'});
+                resizeBg();
             }
 
             function showEkaOnly() {
@@ -438,6 +441,7 @@
                 $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
                 $('#eka-link').addClass('choosed');
                 $('.eka').css({'display':'block'});
+                resizeBg();
             }
 
             function showNskOnly() {
@@ -445,16 +449,17 @@
                 $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
                 $('#nsk-link').addClass('choosed');
                 $('.nsk').css({'display':'block'});
+                resizeBg();
             }
 
             $('#speakers_tables').css({"display":"block"});
-			theWindow.resize(resizeBg).trigger("resize");
             $('#msk-link').on('click', showMoscowOnly);
             $('#spb-link').on('click', showSpbOnly);
             $('#omsk-link').on('click', showOmskOnly);
             $('#nsk-link').on('click', showNskOnly);
             $('#eka-link').on('click', showEkaOnly);
 
+            theWindow.resize(resizeBg).trigger("resize");
             showMoscowOnly();
 		});
 
