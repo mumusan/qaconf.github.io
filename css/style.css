@@ -36,6 +36,11 @@
         min-width: 1024px;
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
     #footer .description {
         display: block;
         position: absolute;
@@ -189,7 +194,6 @@
 		width:100%;
 		height:100%;
 	}
-
 	#speakers > .content {
 		position: relative;
 		min-width: 900px;
@@ -237,9 +241,10 @@
 	}
 
 	#speakers_tables {
+        display:none;
 		overflow: hidden;
 		position: absolute;
-		top: 130px;
+		top: 160px;
 	}
 
     @media (max-width: 1200px) {

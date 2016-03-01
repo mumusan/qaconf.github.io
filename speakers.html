@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=1000">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/highlight.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
@@ -15,7 +14,7 @@
             <div><a href="index.html">О конференции</a></div>
             <div><a href="speakers.html">Спикеры</a></div>
             <div>Сессии</div>
-            <div>Контакты</div>
+            <!-- <div>Контакты</div> -->
             <div class="register_button">РЕГИСТРАЦИЯ</div>
         </div>
     </div>
@@ -42,29 +41,29 @@
 				<div id="speakers_title">
                     <div class="title">ДОКЛАДЧИКИ</div>
                     <div class="cities">
-                        <a class="choosed" href="#">Москва</a>
-                        <a href="#">Санкт-Петербург</a>
-                        <a href="#">Омск</a>
-                        <a href="#">Екатеринбург</a>
-                        <a href="#">Новосибирск</a>
+                        <a id="msk-link" class="choosed" href="#">Москва</a>
+                        <a id="spb-link" href="#">Санкт-Петербург</a>
+                        <a id="omsk-link" href="#">Омск</a>
+                        <a id="eka-link" href="#">Екатеринбург</a>
+                        <a id="nsk-link" href="#">Новосибирск</a>
                     </div>
                 </div>
 				<div id="speakers_tables">
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk nsk">
                         <div class="company">
-                            <img src="img/kaspersky.png"/>
+                            <img src="img/sber.png"/>
                         </div>
                         <div class="photo">
-                            <img src="img/chumakin.png"/>
+                            <img src="img/ggalkina.png"/>
                         </div>
                         <div class="person">
-                            Александр<br>Чумакин
+                            Галина<br>Галкина
                         </div>
                         <div class="about">
-                            <span class="company_bold">Kaspersky Lab</span> - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
+                            Начальник Управления тестирования банковских систем <span class="company_bold">Сбербанк Технологии</span>. В тестировании с 2002 года. Работала в «гигантах» ИТ телекома и банкинга: CBOSS, Luxoft, Ситроникс Телеком Солюшнс. Прошла профессиональный путь от «работы руками» до выстраивания работы команд/подразделений
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb omsk eka nsk">
                         <div class="company">
                             <img src="img/luxoft.png"/>
                         </div>
@@ -75,26 +74,194 @@
                             Станислав<br>Сидристый
                         </div>
                         <div class="about">
-                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
+                            Архитектор решений компании <span class="company_bold">Luxoft</span>. Участвовал в многих проектах компании, занимался как разработкой, так и автоматизацией тестирования как .NET/WPF приложений, так и Java/Groovy Web приложений. Разрабатывал для огромного спектра платформ, руководил как разработкой так и тестированием.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk eka">
                         <div class="company">
-                            <img src="img/db.png"/>
+                            <img src="img/pentestit.png"/>
                         </div>
                         <div class="photo">
-                            <img src="img/namestnikov.png"/>
+                            <img src="img/rr.png"/>
                         </div>
                         <div class="person">
-                            Никита<br>Наместников
+                            Роман<br>Романов
                         </div>
                         <div class="about">
-                            <span class="company_bold">Deutsche Bank</span> -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений
+                            Генеральный директор компании <span class="company_bold">Pentestit</span>, сертифицированный специалист в области обеспечения безопасности информационных систем, докладчик на международных конференциях. Топ-эксперт Института Развития Интернета (секция "информационная безопасность")
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk eka">
+                        <div class="company">
+                            <img src="img/pentestit.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/lsafonov.png"/>
+                        </div>
+                        <div class="person">
+                            Лука<br>Сафонов
+                        </div>
+                        <div class="about">
+                            Технический директор компании <span class="company_bold">Pentestit</span>, автор многочисленных докладов и исследований в области практической информационной безопасности, докладчик на международных форумах и конференциях. Имеет более 10 лет практического опыта тестирования на проникновение информационных систем государственного, финансового и e-commerce секторов. Эксперт Института Развития Интернета (секция "информационная безопасность")
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb nsk">
+                        <div class="company">
+                            <img src="img/epam.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/riovlev.png"/>
+                        </div>
+                        <div class="person">
+                            Роман<br>Иовлев
+                        </div>
+                        <div class="about">
+                            Chief QA Automation и евангелист в компании <span class="company_bold">EPAM</span>. Посчастливилось поучаствовать в различных конференциях таких как SQA Days, Agile Days, IT Week, IT Subbotnik и EuroStar. Автор фреймворка для автоматизированного тестирования VIQA и набора утилит для DDT (VIQA TDG - test data generator).
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk">
+                        <div class="company">
+                            <img src="img/rmbit.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/Ogorodnikov.png"/>
+                        </div>
+                        <div class="person">
+                            Евгений<br>Огородников
+                        </div>
+                        <div class="about">
+                            Инженер с богатым опытом поднятия процессов тестирования и автоматизации тестирования. Всесторонне участвовал в создании, тестировании и выпуске высоконагруженных приложений для крупнейших заказчиков - от Ericson'а до МинЗдрава РФ, руководитель отдела тестирования
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/here.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/akbashev.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Акбашев
+                        </div>
+                        <div class="about">
+                            Старший специалист по тестированию в компании <span class="company_bold">HERE</span> - ведущем провайдере карт. Сервера компании ежедневно (!) прогоняют свыше 60 тысяч билдов - для всех клиентов, на различных операционных системах, под управлением единой системы контроля автоматизации тестирования.
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/yandex.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/lavrenuk.png"/>
+                        </div>
+                        <div class="person">
+                            Алексей<br>Лавренюк
+                        </div>
+                        <div class="about">
+                            В <span class="company_bold">Яндексе</span> 4 года, занимается нагрузочным тестированием, разработкой инструментов и экспериментами в области производительности. Ведет open-source проекты <a href="https://github.com/yandex/yandex-tank">Яндекс.Танк</a> и <a href="https://github.com/yandex/pandora">Pandora</a>
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/virtuozzo.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/antyshev.png"/>
+                        </div>
+                        <div class="person">
+                            Евгений<br>Антышев
+                        </div>
+                        <div class="about">
+                            Ведущий инженер по тестированию в компании <span class="company_bold">Virtuozzo (бывшая Parallels)</span> - ведущем разработчике в области контейнерной виртуализации. Работал вплотную с такими инфраструктурными проектами Openstack которые могут потенциально быть полезны для развертывания CI систем: Zuul, Nodepool, diskimage-builder
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb">
                         <div class="company">
                             <img src="img/kaspersky.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/scheglovitov.png"/>
+                        </div>
+                        <div class="person">
+                            Игорь<br>Щегловитов
+                        </div>
+                        <div class="about">
+                            Ведущий инженер в Лаборатории Касперского и Microsoft ALM Ranger. Занимается разработкой автоматизированных тестов на .NET. Был спикером на ключевых конференциях Microsoft. Написал множество статей по тестированию  (статьи на Habr можно найти по тегу #mstesting)
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk nsk">
+                        <div class="company">
+                            <img src="img/sber.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/neradovskiy.png"/>
+                        </div>
+                        <div class="person">
+                            Константин<br>Нерадовский
+                        </div>
+                        <div class="about">
+                            Основное мое достижение - это то, что автоматизация стала пользоваться спросом со стороны отделов и управлений функционального тестирования. Разработанная при моем непосредственном участии новая технологическая платформа - BDD автотесты, java, selenium, appium, позволила значительно ускорить выполнение автотестов, снизить затраты на поддержку и самое главное - она удобна в использовании ручными тестировщиками
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/epam.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/pirogov.png"/>
+                        </div>
+                        <div class="person">
+                            Сергей<br>Пирогов
+                        </div>
+                        <div class="about">
+                            Работал на различных проектах: системы управления рисками, торговые платформы для больших банков и eCommerce решения для больших торговых платформ. Имею большой опыт работы с BDD инструментами, такими как JBehave, Cucumber. Выступаю в качестве ментора и лектора на различных мероприятиях. Выступал в качестве докладчика на QAFest 2015.
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/cifratech.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/aivanov.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Иванов
+                        </div>
+                        <div class="about">
+                            Старший инженер по интеграции системы условного доступа (СУД) в ПО сторонних разработчиков. Подготовил к сертификации не менее 25 принципиально разных модификаций приемников. Сертифицировал не менее 50 релизов для них. Занимается ручным и автоматизированным тестированием. Организовал и начал внедрять автоматизацию тестирования приёмников. Участник нескольких ИТ конференций, а также международных выставок в области телекоммуникаций
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb nsk omsk eka">
+                        <div class="company">
+                            <img src="img/dins.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/akmaev.png"/>
+                        </div>
+                        <div class="person">
+                            Дмитрий<br>Акмаев
+                        </div>
+                        <div class="about">
+                            В настоящий момент управляет и развивает проект Global Continues Integration. В тестировании 12 лет. Работал в компаниях: Quest Software (Dell), I-Free, с 2011 года работает в Dino Systems (DINS). Приходилось использовать практически все методы тестирования, включая исследовательское, тестирование производительности и даже мутационное. Не обошлось и без создания своих Frameworks.
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk eka">
+                        <div class="company">
+                            <img src="img/cit.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/mahetov.png"/>
+                        </div>
+                        <div class="person">
+                            Сергей<br>Махетов
+                        </div>
+                        <div class="about">
+                            Участвовал в разработке автотестов интеграционных шин для организации внутриведомственного, межведомственного, а также для межгосударственного электронного взаимодействия в рамках Евразийской Экономической Комиссии. Занимался настройкой и тестированием отказоустойчивых конфигураций для серверов БД, серверов приложений и служб обмена данными.
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb">
+                        <div class="company">
+                            <img src="img/juno.png"/>
                         </div>
                         <div class="photo">
                             <img src="img/chumakin.png"/>
@@ -103,203 +270,77 @@
                             Александр<br>Чумакин
                         </div>
                         <div class="about">
-                            <span class="company_bold">Kaspersky Lab</span> - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
+                            Ведущий специалист по автоматизированному тестированию в компании Juno. Прекрасно владеет и обладает обширным багажом знаний в инструментах: Selenium Webdriver, Ranorex, Sikuli, AutoIt, Sahi, Cucumber, Robot Framework и множеством других инструментов для автоматизированного тестирования Web, Desktop, Java, DB, back-end, performance приложений
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry spb nsk">
                         <div class="company">
-                            <img src="img/luxoft.png"/>
+                            <img src="img/trk.png"/>
                         </div>
                         <div class="photo">
-                            <img src="img/sidristyi.png"/>
+                            <img src="img/yan.png"/>
                         </div>
                         <div class="person">
-                            Станислав<br>Сидристый
+                            Ян<br>Алексеенко
                         </div>
                         <div class="about">
-                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
+                            Руководитель отдела обеспечения качества СПО. За 9 лет получил опыт ручного тестирования, автоматизации, performance/load, usability, penetration и прочих видов тестирования. Обучал персонал автоматизации. Построил отдел тестирования с нуля, который с успехом справляется с задачами и приносит большую пользу компании. Параллельно с этой областью вот уже 5 лет занимаюсь разработкой професионального ПО для радиолюбителей Zeus Radio
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk">
                         <div class="company">
-                            <img src="img/db.png"/>
+                            <img src="img/neoflex.png"/>
                         </div>
                         <div class="photo">
-                            <img src="img/namestnikov.png"/>
+                            <img src="img/bobkov.png"/>
                         </div>
                         <div class="person">
-                            Никита<br>Наместников
+                            Михаил<br>Бобков
                         </div>
                         <div class="about">
-                            <span class="company_bold">Deutsche Bank</span> -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений
+                            Исполняет роль архитектора на интеграционных проектах. Последние несколько лет работает над одним из крупнейших интеграционных проектов УСБС. Является идейным вдохновителем и архитектором системы для автоматизации тестирования интеграционных проектов
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry msk spb omsk eka">
                         <div class="company">
-                            <img src="img/kaspersky.png"/>
+                            <img src="img/tamtek.png"/>
                         </div>
                         <div class="photo">
-                            <img src="img/chumakin.png"/>
+                            <img src="img/bobrova.png"/>
                         </div>
                         <div class="person">
-                            Александр<br>Чумакин
+                            Екатерина<br>Боброва
                         </div>
                         <div class="about">
-                            <span class="company_bold">Kaspersky Lab</span> - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
+                            Ведущий инженер по тестированию. Занимается ручным и автоматизированных тестированием, обучением стажеров. В основном работает на backend проектах и проектах со сложной структурой, занимаюсь детализацией требований, разработкой и поддержанием тестовой документации, написанием, поддержкой и CI для автотестов, ручным тестированием.
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry nsk">
                         <div class="company">
-                            <img src="img/luxoft.png"/>
+                            <img src="img/magora.png"/>
                         </div>
                         <div class="photo">
-                            <img src="img/sidristyi.png"/>
+                            <img src="img/belev.png"/>
                         </div>
                         <div class="person">
-                            Станислав<br>Сидристый
+                            Алексей<br>Белев
                         </div>
                         <div class="about">
-                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
+                            За время недолгой работы в команде, вывел тестирование и контроль качества на новый уровень. Процент поиска багов вырос с 67% до 89%. Обучил отдел продаж как надо и как не надо продавать тестирование (результатом стала продажа автоматизированного тестирования в нескольких крупных проектах). Продвинул автоматизацию в компании, настоял на обучении сотрудников основам автоматизации и программирования ( на данный момент 75% отдела умеют на должном уровне пользоваться инструментами автоматизации)
                         </div>
                     </div>
-                    <div class="speaker_entry">
+                    <div class="speaker_entry nsk">
                         <div class="company">
-                            <img src="img/db.png"/>
+                            <img src="img/magora.png"/>
                         </div>
                         <div class="photo">
-                            <img src="img/namestnikov.png"/>
+                            <img src="img/macivecky.png"/>
                         </div>
                         <div class="person">
-                            Никита<br>Наместников
+                            Михаил<br>Мациевский
                         </div>
                         <div class="about">
-                            <span class="company_bold">Deutsche Bank</span> -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/kaspersky.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/chumakin.png"/>
-                        </div>
-                        <div class="person">
-                            Александр<br>Чумакин
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Kaspersky Lab</span> - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/luxoft.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/sidristyi.png"/>
-                        </div>
-                        <div class="person">
-                            Станислав<br>Сидристый
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/db.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/namestnikov.png"/>
-                        </div>
-                        <div class="person">
-                            Никита<br>Наместников
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Deutsche Bank</span> -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/kaspersky.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/chumakin.png"/>
-                        </div>
-                        <div class="person">
-                            Александр<br>Чумакин
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Kaspersky Lab</span> - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/luxoft.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/sidristyi.png"/>
-                        </div>
-                        <div class="person">
-                            Станислав<br>Сидристый
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/db.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/namestnikov.png"/>
-                        </div>
-                        <div class="person">
-                            Никита<br>Наместников
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Deutsche Bank</span> -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/kaspersky.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/chumakin.png"/>
-                        </div>
-                        <div class="person">
-                            Александр<br>Чумакин
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Kaspersky Lab</span> - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/luxoft.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/sidristyi.png"/>
-                        </div>
-                        <div class="person">
-                            Станислав<br>Сидристый
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Luxoft</span> - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников
-                        </div>
-                    </div>
-                    <div class="speaker_entry">
-                        <div class="company">
-                            <img src="img/db.png"/>
-                        </div>
-                        <div class="photo">
-                            <img src="img/namestnikov.png"/>
-                        </div>
-                        <div class="person">
-                            Никита<br>Наместников
-                        </div>
-                        <div class="about">
-                            <span class="company_bold">Deutsche Bank</span> -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений
+                            Бывший C# Dev, ныне переквалифицировался в специалиста тестирования. Привёл в порядок существующий, структурировал и разработал собственный фреймворк работы, основанный на Selenium и Selenide. Совместно c Алексеем подняли полную схему автоматизации (Github, bitbucket репозитории -> CIS(teamcity, Jenkins) -> Testlink -> отчёт на почте с результатами). На данный момент занимается разработкой фреймворка на основе Appium для автоматизации тестирования мобильных платформ.
                         </div>
                     </div>
 				</div>
@@ -307,7 +348,6 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		$(window).load(function() {
 
 			var theWindow    = $(window),
 				$bg          = $("#speakers_bg"),
@@ -344,7 +384,7 @@
 
                 // поставить на места таблицу спикеров
                 var speakers = $("#speakers_tables");
-                var entries = $(".speaker_entry");
+                var entries = $(".speaker_entry:visible");
 
                 var num_per_row = Math.floor(speakers.width() / 210);
                 var entries_width = (speakers.width() / num_per_row) - 25; // 25 - margins + space
@@ -352,29 +392,86 @@
                 entries.width(entries_width);
 
                 var row = 0, current = 0;
-                for(row = 0; row < rows, current < entries.size(); row++)
+                for(row = 0; (row < rows) && (current < entries.size()); row++)
                 {
                     var hh = 0, tmpcur = current;
-                    for(var col = 0; col < num_per_row, tmpcur < entries.size(); col++)
+                    for(var col = 0; (col < num_per_row) && (tmpcur < entries.size()); col++)
                     {
                         hh = Math.max(hh, $(entries[tmpcur]).height());
                         tmpcur++;
                     }
                     tmpcur = current;
-                    for(col = 0; col < num_per_row, tmpcur < entries.size(); col++)
+                    for(col = 0; (col < num_per_row) && (tmpcur < entries.size()); col++)
                     {
                         $(entries[tmpcur]).height(hh);
                         tmpcur++;
                     }
-                    current++;
+                    current = tmpcur;
                 }
 
         	}
 
-            //$bg.each(placeBackgroundOnScroll);
+            function showMoscowOnly() {
+                $('.omsk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#msk-link').addClass('choosed');
+                $('.msk').css({'display':'block'});
+                resizeBg();
+            }
 
-			theWindow.resize(resizeBg).trigger("resize");
+            function showSpbOnly() {
+                $('.omsk,.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#spb-link').addClass('choosed');
+                $('.spb').css({'display':'block'});
+                resizeBg();
+            }
+
+            function showOmskOnly() {
+                $('.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#omsk-link').addClass('choosed');
+                $('.omsk').css({'display':'block'});
+                resizeBg();
+            }
+
+            function showEkaOnly() {
+                $('.omsk,.msk,.nsk,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#eka-link').addClass('choosed');
+                $('.eka').css({'display':'block'});
+                resizeBg();
+            }
+
+            function showNskOnly() {
+                $('.omsk,.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#nsk-link').addClass('choosed');
+                $('.nsk').css({'display':'block'});
+                resizeBg();
+            }
+
+            $('#speakers_tables').css({"display":"block"});
+            $('#msk-link').on('click', showMoscowOnly);
+            $('#spb-link').on('click', showSpbOnly);
+            $('#omsk-link').on('click', showOmskOnly);
+            $('#nsk-link').on('click', showNskOnly);
+            $('#eka-link').on('click', showEkaOnly);
+
+            theWindow.resize(resizeBg).trigger("resize");
+            showMoscowOnly();
+        $(window).load(function() {
+            //resizeBg();
 		});
+
+        // Google Analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-12938027-10', 'auto');
+        ga('send', 'pageview');
 	</script>
 </body>
 </html>
