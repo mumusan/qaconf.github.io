@@ -67,9 +67,11 @@
     }
 
 	#header > .menu {
+        pointer-events: auto;
 	    float: right;
 	    height: 40px;
 	    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 15pt;
 	    color: #fff;
 	    margin-top:40px;
 	    margin-right:40px;
@@ -158,7 +160,7 @@
 		font-size: 16pt;
 		font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
    	    color: #d4d4d4;
-   	    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);	
+   	    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
 		margin: 0 auto;
 		width: 840px;
 	}
@@ -195,6 +197,7 @@
 		width:100%;
 		height:100%;
 	}
+
 	#speakers > .content {
 		position: relative;
 		min-width: 900px;
@@ -544,6 +547,160 @@
 
     /***
      *
-     *  About.html area
+     *  Register.html area
      *
      */
+
+    #register_bg {
+        position: absolute; top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 1024px;
+        min-height: 800px;
+        background-image: url("../img/register_bg.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    #register > .content {
+        position: relative;
+        min-width: 900px;
+        margin: auto;
+        top: 130px;
+        width: 80%;
+        height: 100%;
+    }
+
+    #register_title {
+        position: absolute;
+        width:  100%;
+        height: 100px;
+    }
+
+    #register_title > .title {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        color: white;
+        font-size: 3.7vw; /*50pt;*/
+        font-weight: 700;
+    }
+
+    #reg_conteiner {
+        overflow: hidden;
+        position: absolute;
+        top: 130px;
+        height: 100%;
+        width: 100%;
+    }
+
+    #reg_info {
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        width: 50%;
+        height: 100%;
+    }
+
+    #reg_buttons_area {
+        position: absolute;
+        top: 130px;
+        left: 55%;
+        width: 50%;
+        height: 100%;
+    }
+
+    #reg_info > h2 {
+        color: #fee000;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 17pt;
+        font-weight: 400;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #reg_info > p {
+        color: white;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14pt;
+        font-weight: 400;
+    }
+
+    #reg_buttons_area .reg-city {
+        height: 135px;
+        width:100%;
+    }
+
+    .reg-city .city-name {
+        display: inline-block;
+        width: 100%;
+        color: #fee000;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 22pt;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .reg-city .city-descr {
+        width: 100%;
+    }
+    .city-descr .city-address  {
+        display: inline-block;
+        float: left;
+        width:30%;
+        color: white;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14pt;
+        font-weight: 500;
+        margin-right: 30px;
+    }
+
+    .city-descr .date-time  {
+        display: inline-block;
+        float: left;
+        width: 25%;
+        color: white;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14pt;
+        font-weight: 500;
+    }
+
+    .city-descr .city-go  {
+        display: inline-block;
+        float: right;
+        width:40%;
+        height:100%;
+        color: white;
+        font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 17pt;
+        font-weight: 500;
+    }
+
+    .city-go a {
+        display: block;
+        float: left;
+        background-color: #e37c00;
+        width:100%;
+        height:50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+
+        #reg_info {
+            top: 160px;
+        }
+
+        #register_title {
+            height: 130px;
+            text-align: center;
+        }
+
+        #register_title .title {
+            font-size: 50pt;
+            font-weight: 700;
+            width: 100%;
+            bottom: 30px;
+        }
+    }
