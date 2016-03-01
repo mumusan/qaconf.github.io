@@ -244,7 +244,7 @@
 	#speakers_tables {
 		overflow: hidden;
 		position: absolute;
-		top: 130px;
+		top: 160px;
 	}
 
     @media (max-width: 1200px) {
