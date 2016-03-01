@@ -668,8 +668,9 @@
     .city-descr .city-go  {
         display: inline-block;
         float: right;
-        width:40%;
+        width:35%;
         height:100%;
+        max-width: 230px;
         color: white;
         font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
         font-size: 17pt;
@@ -701,11 +702,19 @@
         }
 
         #reg_info {
-            width: 40%;
+            width: 35%;
+        }
+
+        .reg-city {
+            height: 160px;
+        }
+
+        .city-descr .city-address {
+            width: 34%;
         }
 
         #reg_buttons_area {
-            left: 45%;
+            left: 40%;
             width: 60%;
         }
     }
