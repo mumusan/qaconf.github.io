@@ -38,34 +38,35 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-	$(window).load(function() {    
 
-        var theWindow    = $(window),
-            $bg          = $("#index_bg"),
-            moscow_sizes = $('#moscow_sizes'),
-            description  = $('.description > p');
+    var theWindow    = $(window),
+        $bg          = $("#index_bg"),
+        moscow_sizes = $('#moscow_sizes'),
+        description  = $('.description > p');
 
-        function resizeBg() {
+    function resizeBg() {
 
-            var window_width  = theWindow.width(),
-                window_height = theWindow.height(),
-                bg_width = moscow_sizes.width(),
-                bg_height = moscow_sizes.height();
+        var window_width  = theWindow.width(),
+            window_height = theWindow.height(),
+            bg_width = moscow_sizes.width(),
+            bg_height = moscow_sizes.height();
 
-            var wdiff = Math.max(window_width, 1024) / bg_width;
-            var hdiff = Math.max(window_height, 800) / bg_height;
-            var ratio = Math.max(wdiff, hdiff);
+        var wdiff = Math.max(window_width, 1024) / bg_width;
+        var hdiff = Math.max(window_height, 800) / bg_height;
 
-            var newWidth = Math.min(bg_width * ratio, window_width);
-            var newHeight = Math.min(bg_height * ratio, window_height);
+        var ratio = Math.max(wdiff, hdiff);
 
-            // растянуть по вертикали, по горизонтали сцентровать
-            $bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
+        var newWidth = Math.min(bg_width * ratio, window_width);
+        var newHeight = Math.min(bg_height * ratio, window_height);
 
-            // дополнительн пофиксить шрифт description
-            description.css({"font-size": (16 - 6 * (1-Math.min(wdiff, hdiff)))+"pt"});
-        }
+        // растянуть по вертикали, по горизонтали сцентровать
+        $bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
 
+        // дополнительн пофиксить шрифт description
+        description.css({"font-size": (16 - 6 * (1-Math.min(wdiff, hdiff)))+"pt"});
+    }
+    resizeBg();
+    $(window).load(function() {
         theWindow.resize(resizeBg).trigger("resize");
 	});
 	</script>
