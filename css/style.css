@@ -195,7 +195,6 @@
 		height:100%;
 	}
 	#speakers > .content {
-        display:none;
 		position: relative;
 		min-width: 900px;
 		margin: auto;
@@ -242,6 +241,7 @@
 	}
 
 	#speakers_tables {
+        display:none;
 		overflow: hidden;
 		position: absolute;
 		top: 160px;
