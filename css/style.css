@@ -688,10 +688,6 @@
 
     @media (max-width: 1200px) {
 
-        #reg_info {
-            top: 160px;
-        }
-
         #register_title {
             height: 130px;
             text-align: center;
@@ -702,5 +698,14 @@
             font-weight: 700;
             width: 100%;
             bottom: 30px;
+        }
+
+        #reg_info {
+            width: 40%;
+        }
+
+        #reg_buttons_area {
+            left: 45%;
+            width: 60%;
         }
     }
