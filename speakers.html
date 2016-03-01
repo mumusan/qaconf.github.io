@@ -392,6 +392,11 @@
                 entries.width(entries_width);
 
                 var row = 0, current = 0;
+
+                // let browser reset heights 
+                entries.height('auto');
+
+                // calculate new
                 for(row = 0; (row < rows) && (current < entries.size()); row++)
                 {
                     var hh = 0, tmpcur = current;
@@ -460,8 +465,9 @@
 
             theWindow.resize(resizeBg).trigger("resize");
             showMoscowOnly();
+
         $(window).load(function() {
-            //resizeBg();
+            resizeBg();
 		});
 
         // Google Analytics
