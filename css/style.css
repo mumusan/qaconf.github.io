@@ -641,12 +641,13 @@
         font-weight: 400;
         margin-bottom: 20px;
     }
+
     .reg-city .city-descr {
-        width: 100%;
+        min-width: 575px;
     }
+
     .city-descr .city-address  {
         display: inline-block;
-        float: left;
         width:30%;
         color: white;
         font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -657,7 +658,6 @@
 
     .city-descr .date-time  {
         display: inline-block;
-        float: left;
         width: 25%;
         color: white;
         font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -667,8 +667,7 @@
 
     .city-descr .city-go  {
         display: inline-block;
-        float: right;
-        width:35%;
+        width: 200px;
         height:100%;
         max-width: 230px;
         color: white;
@@ -710,11 +709,15 @@
         }
 
         .city-descr .city-address {
-            width: 34%;
+            width: 30%;
+        }
+
+        .city-descr .date-time {
+            width: 20%;
         }
 
         #reg_buttons_area {
             left: 40%;
-            width: 60%;
+            width: 65%;
         }
     }
