@@ -4,6 +4,12 @@
  *  Matrix.html area
  *
  */
+body {
+    margin: 0px;
+    background-color: #000;
+    min-width: 1600px;
+    min-height: 800px;
+}
 
 #matrix_bg {
     position: fixed; top: 0; left: 0;
@@ -34,6 +40,7 @@
 
 #matrix_title {
     position: relative;
+    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
     width:  75%;
     height: 100px;
     margin: 0px auto;
@@ -43,18 +50,32 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
-    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    font-size: 3.7vw; /*50pt;*/
+    font-size: 50pt;
     font-weight: 700;
 }
 
 #matrix_title > .cities {
     position: absolute;
     right: 0px;
-    bottom: 0.8vw; /*15px;*/
+    bottom: 15px;
 }
 
+.cities a {
+    text-align: right;
+    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 16pt;
+    font-weight: 300;
+    margin: 0px 6px;
+}
+
+a.choosed {
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+/*
 @media (max-width: 1200px) {
 
     #matrix_tables {
@@ -85,7 +106,7 @@
         font-size: 16pt;
     }
 }
-
+*/
 
 #matrix_table {
     width: 100%;
