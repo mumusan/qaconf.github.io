@@ -134,6 +134,7 @@ a.choosed {
     text-align: center;
     font-size: 50pt;
     font-weight: 200;
+    vertical-align: middle;
 }
 
 .table-cell {
