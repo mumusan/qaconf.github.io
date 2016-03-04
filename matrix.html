@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=1000">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/highlight.css">
+    <link rel="stylesheet" href="css/matrix.css">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
@@ -45,138 +45,727 @@
             </div>
 
             <div id="matrix_table">
+                <table id="main-table">
+                    <colgroup>
+                        <col class="time-column" />
+                        <col class="first-column" />
+                        <col class="second-column" />
+                        <col class="third-column" />
+                        <col class="fourth-column" />
+                    </colgroup>
+                    <tbody>
+                        <!-- HEADER -->
+                        <tr class="header-row">
+                            <td>
 
-                <!--
-                  --  ЗАЛ №1 им Ады Лавлейс
-                  -->
-                <div class="row">
-                    <div class="mini_avatar_room">
-                        <img src="img/ada_left.jpg" />
-                    </div>
-                    <div class="room_description">
-                        <p><span class="hall">Зал</span><br>им. Ады Левлейс</p>
-                    </div>
-                    <div class="presentations">
-                        <div class="entry">
-                            <p class="time">
-                                09<sup>00</sup> - 10<sup>30</sup>
-                            </p>
-                            <div class="presentation-text">
-                                Паттерны и антипаттерны Cucumber-based BDD проектов: стандартизация огуречного кода.
-                            </div>
-                        </div>
-                        <div class="entry">
-                            <p class="time">
-                                10<sup>30</sup> - 12<sup>00</sup>
-                            </p>
-                            <div class="presentation-text">
-                                Паттерны и антипаттерны Cucumber-based BDD проектов
-                            </div>
-                        </div>
-                        <div class="entry">
-                            <p class="time">
-                                09<sup>00</sup> - 10<sup>30</sup>
-                            </p>
-                            <div class="presentation-text">
-                                Паттерны и антипаттерны Cucumber-based BDD проектов
-                            </div>
-                        </div>
-                        <div class="entry">
-                            <p class="time">
-                                10<sup>30</sup> - 12<sup>00</sup>
-                            </p>
-                            <div class="presentation-text">
-                                Паттерны и антипаттерны Cucumber-based BDD проектов
-                            </div>
-                        </div>
-                        <div class="entry">
-                            <p class="time">
-                                09<sup>00</sup> - 10<sup>30</sup>
-                            </p>
-                            <div class="presentation-text">
-                                Паттерны и антипаттерны Cucumber-based BDD проектов
-                            </div>
-                        </div>
-                        <div class="entry">
-                            <p class="time">
-                                10<sup>30</sup> - 12<sup>00</sup>
-                            </p>
-                            <div class="presentation-text">
-                                Паттерны и антипаттерны Cucumber-based BDD проектов
-                            </div>
-                        </div>
-                    </div>
-                    <div class="descriptions">
+                            </td>
+                            <td class="table-header">
+                                <p class="hall-name">Конгресс-холл</p>
+                                <p class="hall-desc">Основные доклады</p>
+                            </td>
+                            <td class="table-header">
+                                <p class="hall-name">Второй зал</p>
+                                <p class="hall-desc">Учимся на чужом опыте</p>
+                            </td>
+                            <td class="table-header">
+                                <p class="hall-name">Третий зал</p>
+                                <p class="hall-desc">Учимся на ошибках</p>
+                            </td>
+                            <td class="table-header">
+                                <p class="hall-name">Практический</p>
+                                <p class="hall-desc">Учимся сами</p>
+                            </td>
+                        </tr>
 
-                    </div>
-                    <div class="avatar_room">
-                        <img src="img/ada_right.jpg" />
-                    </div>
-                </div>
+                        <!--  09:30 - 10:00  -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                09<sup>30</sup> - 10<sup>00</sup>
+                            </td>
+                            <td class="cross-row-header" colspan="4">
+                                Открытие конференции
+                            </td>
+                        </tr>
 
-                <!--
-                  --  ЗАЛ №2 им Дональда Кнута
-                  -->
-                <div class="row">
-                    <div class="mini_avatar_room">
-                        <img src="img/knut_left.jpg" />
-                    </div>
-                    <div class="room_description">
-                        <p><span class="hall">Зал</span><br>им. Дональда Кнута</p>
-                    </div>
-                    <div class="presentations">
+                        <!--  10:00 - 10:45  -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>45</sup>
+                            </td>
+                            <td class="table-cell">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                    </div>
-                    <div class="descriptions">
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
 
-                    </div>
-                    <div class="avatar_room">
-                        <img src="img/knut_right.jpg" />
-                    </div>
-                </div>
+                        <!--  10:00 - 10:45  -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>45</sup>
+                            </td>
+                            <td class="table-cell">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                <!--
-                  --  ЗАЛ №3 им. Брюса Шнайера
-                  -->
-                <div class="row">
-                    <div class="mini_avatar_room">
-                        <img src="img/ada_left.jpg" />
-                    </div>
-                    <div class="room_description">
-                        <p><span class="hall">Зал</span><br>им. Брюса Шнейера</p>
-                    </div>
-                    <div class="presentations">
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
 
-                    </div>
-                    <div class="descriptions">
+                        <!--  09:30 - 10:00  LUNCH -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>50</sup>
+                            </td>
+                            <td class="cross-row-header" colspan="4">
+                                Обед
+                            </td>
+                        </tr>
 
-                    </div>
-                    <div class="avatar_room">
-                        <img src="img/ada_right.jpg" />
-                    </div>
-                </div>
+                        <!--  10:00 - 10:45  -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>45</sup>
+                            </td>
+                            <td class="table-cell">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
 
-                <!--
-                  --  ЗАЛ №4 аудиторный
-                  -->
-                <div class="row">
-                    <div class="mini_avatar_room">
-                        <img src="img/knut_left.jpg" />
-                    </div>
-                    <div class="room_description">
-                        <p><span class="hall">Зал</span><br>им. Брюса Шнейера</p>
-                    </div>
-                    <div class="presentations">
+                        <!--  10:00 - 10:45  -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>45</sup>
+                            </td>
+                            <td class="table-cell">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                    </div>
-                    <div class="descriptions">
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
 
-                    </div>
-                    <div class="avatar_room">
-                        <img src="img/knut_right.jpg" />
-                    </div>
-                </div>
+                        <!--  09:30 - 10:00  CAFE-BREAK -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>50</sup>
+                            </td>
+                            <td class="cross-row-header" colspan="4">
+                                Кофе-брейк
+                            </td>
+                        </tr>
+
+                        <!--  10:00 - 10:45  -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>45</sup>
+                            </td>
+                            <td class="table-cell">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!--  10:00 - 10:45  -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>45</sup>
+                            </td>
+                            <td class="table-cell">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </td>
+                            <td class="table-header">
+                                <div class="card">
+                                    <table class="card-table">
+                                        <colgroup>
+                                            <col class="card-first-column" />
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="card-header">
+                                            <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                            <td class="author">Станислав Сидристый</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                        </tr>
+                                        <tr><td colspan="2" class="presentation-title">
+                                            Переносим принципы GOF на рельсы автоматизации
+                                        </td></tr>
+                                        <tr><td colspan="2" class="presentation-descr">
+                                            Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                            Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                        </td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!--  09:30 - 10:00  CAFE-BREAK -->
+                        <tr class="short-row">
+                            <td class="time-column">
+                                10<sup>00</sup> - 10<sup>50</sup>
+                            </td>
+                            <td class="cross-row-header" colspan="4">
+                                Закрытие конференции
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
