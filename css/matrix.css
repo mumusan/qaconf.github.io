@@ -138,6 +138,7 @@ a.choosed {
 
 .table-cell {
     padding: 10px;
+    vertical-align: top;
 }
 
 .time-column {
@@ -222,7 +223,7 @@ table.card-table td {
 .presentation-title {
     height: 80px;
     padding: 20px 0px;
-    font-size: 14pt;
+    font-size: 13pt;
     font-weight: 600;
 }
 
@@ -231,5 +232,6 @@ table.card-table td {
     padding: 20px 0px;
     font-size: 12pt;
     font-weight: 100;
+    vertical-align: top;
 }
 
