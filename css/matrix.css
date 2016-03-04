@@ -97,10 +97,16 @@
     width:100%;
     font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
     color: white;
+    border-spacing: 0px;
 }
 
 #main-table>tbody>tr>td {
     padding: 20px;
+}
+
+#main-table>colgroup .first-column,
+#main-table>colgroup .third-column {
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .tbd {
@@ -154,7 +160,7 @@ tr.short-row {
 .cross-row-header {
     text-align: center;
     vertical-align: middle;
-    font-size: 30pt;
+    font-size: 26pt;
     font-weight: 100;
 }
 
@@ -168,6 +174,10 @@ table.card-table {
 
 table.card-table td {
     padding: 0px;
+}
+
+.card-table img {
+    border-radius: 4px;
 }
 
 .card-first-column {
