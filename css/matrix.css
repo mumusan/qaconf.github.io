@@ -187,6 +187,10 @@ tr.short-row {
     font-weight: 100;
 }
 
+.cross-row-header-description {
+    font-size: 20pt;
+}
+
 /* CARD */
 table.card-table {
     padding: 0px;
