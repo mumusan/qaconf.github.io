@@ -75,6 +75,10 @@ a.choosed {
     text-decoration: underline;
     text-decoration-style: double;
 }
+
+#omsk-link, #eka-link, #nsk-link {
+    color: gray;
+}
 /*
 @media (max-width: 1200px) {
 
