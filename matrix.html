@@ -36,8 +36,8 @@
             <div id="matrix_title">
                 <div class="title">ДОКЛАДЫ</div>
                 <div class="cities">
-                    <a class="choosed" href="#">Москва</a>
-                    <a href="#">Санкт-Петербург</a>
+                    <a class="choosed" id="msk-link" href="#">Москва</a>
+                    <a id="spb-link" href="#">Санкт-Петербург</a>
                     <a href="#">Омск</a>
                     <a href="#">Екатеринбург</a>
                     <a href="#">Новосибирск</a>
@@ -45,19 +45,19 @@
             </div>
             <br><br>
             <div id="matrix_table">
-                <table id="main-table">
+                <table id="main-table" class="msk">
                     <colgroup>
                         <col class="time-column" />
                         <col class="first-column" />
                         <col class="second-column" />
                         <col class="third-column" />
                         <col class="fourth-column" />
+                        <col class="time-column-last" />
                     </colgroup>
                     <tbody>
                         <!-- HEADER -->
                         <tr class="header-row">
                             <td>
-
                             </td>
                             <td class="table-header">
                                 <br>
@@ -69,26 +69,28 @@
                                 <br>
                                 <br>
                                 <p class="hall-name">Красный зал</p>
-                                <p class="hall-desc">Передачи опыта</p>
+                                <p class="hall-desc"></p>
                             </td>
                             <td class="table-header">
                                 <br>
                                 <br>
                                 <p class="hall-name">Зеленый зал</p>
-                                <p class="hall-desc">Как поднять процессы</p>
+                                <p class="hall-desc"></p>
                             </td>
                             <td class="table-header">
                                 <br>
                                 <br>
                                 <p class="hall-name">Практический</p>
-                                <p class="hall-desc">30 человек</p>
+                                <p class="hall-desc">Мастер-классы с 17:30</p>
+                            </td>
+                            <td>
                             </td>
                         </tr>
 
                         <!--  10:00 - 10:50  Safonov / Galkina / Mahetov -->
                         <tr class="short-row">
                             <td class="time-column">
-                                10<sup>00</sup> - 10<sup>50</sup>
+                                10<sup>00</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -169,12 +171,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                10<sup>00</sup>
+                            </td>
                         </tr>
 
                         <!--  11:00 - 11:50  Romanov / Ogorodnikov / Bobkov -->
                         <tr class="short-row">
                             <td class="time-column">
-                                11<sup>00</sup> - 11<sup>50</sup>
+                                11<sup>00</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -255,12 +260,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                11<sup>00</sup>
+                            </td>
                         </tr>
 
                         <!--  11:45 - 12:30  COFFEE -->
                         <tr class="short-row">
                             <td class="time-column">
-                                11<sup>45</sup> - 12<sup>30</sup>
+                                11<sup>45</sup>
                             </td>
                             <td class="table-cell"></td>
                             <td class="cross-row-header">
@@ -268,12 +276,15 @@
                             </td>
                             <td class="table-cell"></td>
                             <td class="table-cell"></td>
+                            <td class="time-column">
+                                11<sup>45</sup>
+                            </td>
                         </tr>
 
                         <!--  12:30 - 13:20  Lavrenuk / Chumakin / Bobrova -->
                         <tr class="short-row">
                             <td class="time-column">
-                                12<sup>30</sup> - 13<sup>20</sup>
+                                12<sup>30</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -356,12 +367,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                12<sup>30</sup>
+                            </td>
                         </tr>
 
                         <!--  13:30 - 14:20  Antyshev / Sidristij / Pirogov -->
                         <tr class="short-row">
                             <td class="time-column">
-                                13<sup>30</sup> - 14<sup>20</sup>
+                                13<sup>30</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -442,12 +456,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                13<sup>30</sup>
+                            </td>
                         </tr>
 
                         <!--  14:20 - 15:10  LUNCH -->
                         <tr class="short-row">
                             <td class="time-column">
-                                14<sup>20</sup> - 15<sup>10</sup>
+                                14<sup>20</sup>
                             </td>
                             <td class="table-cell"></td>
                             <td class="cross-row-header">
@@ -455,12 +472,15 @@
                             </td>
                             <td class="table-cell"></td>
                             <td class="table-cell"></td>
+                            <td class="time-column">
+                                14<sup>20</sup>
+                            </td>
                         </tr>
 
                         <!--  15:10 - 16:00  ??? / Iovlev / Scheglovitov -->
                         <tr class="short-row">
                             <td class="time-column">
-                                15<sup>10</sup> - 16<sup>00</sup>
+                                15<sup>10</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -543,12 +563,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                15<sup>10</sup>
+                            </td>
                         </tr>
 
                         <!--  16:10 - 17:00  ??? / Shapovalov / Neradovskij -->
                         <tr class="short-row">
                             <td class="time-column">
-                                16<sup>10</sup> - 17<sup>00</sup>
+                                16<sup>10</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -633,12 +656,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                16<sup>10</sup>
+                            </td>
                         </tr>
 
                         <!--  17:20 - 17:50  CAFE-BREAK -->
                         <tr class="short-row">
                             <td class="time-column">
-                                17<sup>00</sup> - 17<sup>30</sup>
+                                17<sup>00</sup>
                             </td>
                             <td class="table-cell"></td>
                             <td class="cross-row-header">
@@ -646,12 +672,15 @@
                             </td>
                             <td class="table-cell"></td>
                             <td class="table-cell"></td>
+                            <td class="time-column">
+                                17<sup>00</sup>
+                            </td>
                         </tr>
 
                         <!--  17:30 - 18:20  ??? / Sidristij / Vasiliev -->
                         <tr class="short-row">
                             <td class="time-column">
-                                17<sup>30</sup> - 18<sup>20</sup>
+                                17<sup>30</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -757,12 +786,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                17<sup>30</sup>
+                            </td>
                         </tr>
 
                         <!--  18:30 - 19:20  ??? / ??? / ??? -->
                         <tr class="short-row">
                             <td class="time-column">
-                                18<sup>30</sup> - 19<sup>20</sup>
+                                18<sup>30</sup>
                             </td>
                             <td class="table-cell">
                                 <div class="card">
@@ -866,12 +898,15 @@
                                     <div class="tbd">TBD</div>
                                 </div>
                             </td>
+                            <td class="time-column">
+                                18<sup>30</sup>
+                            </td>
                         </tr>
 
                         <!--  19:20  FINISH -->
                         <tr class="short-row">
                             <td class="time-column">
-                                19<sup>20</sup> - 20<sup>00</sup>
+                                19<sup>20</sup>
                             </td>
                             <td class="table-cell"></td>
                             <td class="cross-row-header">
@@ -879,7 +914,889 @@
                             </td>
                             <td class="table-cell"></td>
                             <td class="table-cell"></td>
+                            <td class="time-column">
+                                19<sup>20</sup>
+                            </td>
                         </tr>
+                    </tbody>
+                </table>
+                <table id="main-table" class="spb" style="display: none;">
+                    <colgroup>
+                        <col class="time-column" />
+                        <col class="first-column" />
+                        <col class="second-column" />
+                        <col class="third-column" />
+                        <col class="fourth-column" />
+                        <col class="time-column-last" />
+                    </colgroup>
+                    <tbody>
+                    <!-- HEADER -->
+                    <tr class="header-row">
+                        <td></td>
+                        <td class="table-header">
+                            <br>
+                            <br>
+                            <p class="hall-name">Конгресс-холл</p>
+                            <p class="hall-desc">Основной зал</p>
+                        </td>
+                        <td class="table-header">
+                            <br>
+                            <br>
+                            <p class="hall-name">Красный зал</p>
+                            <p class="hall-desc"></p>
+                        </td>
+                        <td class="table-header">
+                            <br>
+                            <br>
+                            <p class="hall-name">Зеленый зал</p>
+                            <p class="hall-desc"></p>
+                        </td>
+                        <td class="table-header">
+                            <br>
+                            <br>
+                            <p class="hall-name">Практический</p>
+                            <p class="hall-desc">Мастер-классы с 17:30</p>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <!--  10:00 - 10:50  Akmaev / ??? / ??? -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            10<sup>00</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/akmaev-mini.png"/></td>
+                                        <td class="author">Дмитрий Акмаев</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Управление и развитие проека Global Continues Integration в DINO</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Global CI, что это такое, и чего не хватает в классическом CI
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Доклад о том, как сделать систему из 170 проектов, с одновременной разработкой в 4 странах со сложными
+                                        подсистемами интеграции - вещью управляемой в срезе вопросов тестирования
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/vasiliev-mini.png"/></td>
+                                        <td class="author">Егор Васильев</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Участвовал в запуске YotaPhone первого и второго поколения</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            10<sup>00</sup>
+                        </td>
+                    </tr>
+
+                    <!--  11:00 - 11:50  Sidristij / Ogorodnikov / ??? -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            11<sup>00</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                        <td class="author">Станислав Сидристый</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Ускоренная автоматизация .NET приложений. Как одному работать на трех проектах
+                                        и играть в XBOX
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Собственное решение в автоматизации .NET приложений в клмпании Luxoft, которое
+                                        во многом ускорило как сам процесс автоматизации, так и решение проблем, связанных
+                                        с изменением кода тестируемого приложения
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/ogorodnikov-mini.png" /></td>
+                                        <td class="author">Евгений Огородников</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Руководитель отдела развития RmBIT</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Развёртываем автоматизацию тестирования с нуля - советы из личного опыта
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Выбор стратегии автоматизации тестирования, определение задач и подходов к процессу автоматизации. Тест-план,
+                                        тест-кейсы и критерии выбора подходящих тестов, оценка эффективности и времени выполнения задач
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            11<sup>00</sup>
+                        </td>
+                    </tr>
+
+                    <!--  11:45 - 12:30  COFFEE -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            11<sup>45</sup>
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="cross-row-header">
+                            Кофе-брейк<br><span class="cross-row-header-description">общение со спикерами</span>
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="table-cell"></td>
+                        <td class="time-column">
+                            11<sup>45</sup>
+                        </td>
+                    </tr>
+
+                    <!--  12:30 - 13:20  Ivanov / Chumakin / Bobrova -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            12<sup>30</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png"/></td>
+                                        <td class="author">Александр Иванов</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Старший инженер Отдела Интеграции компании "Цифра"</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Особенности автоматизации тестирования ПО приёмников
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Особенности тестирования ПО цифровых телевизионных приёмников. Автоматизация в тестировании приёмников:
+                                        сложности и способы их решения на собственном примере
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/chumakin-mini.png" /></td>
+                                        <td class="author">Александр Чумакин</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Ведущий специалист по автоматизирации в JUNO</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Автоматизация сценариев взаимодействия интеграционных систем и нагрузочного тестирования
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Тестирование back-end (инструменты, технологии и реальное применение), end-to-end тестирование
+                                        интеграции приложений, нагрузочное тестирование back-end и UI, автоматизация нагрузочных тестов, краткий обзор Big-data технологий
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/bobrova-mini.png" /></td>
+                                        <td class="author">Екатерина Боброва</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Ведущий инженер по тестированию в Тамтэк</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Представление предметной области в автотестах
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        В докладе я расскажу о подходе к организации кода тестов, положительно влияющей на успех автоматизации.
+                                        Также я расскажу о способах хранения тестовых данных в зависимости от сложности тестируемой бизнес-логики
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            12<sup>30</sup>
+                        </td>
+                    </tr>
+
+                    <!--  13:30 - 14:20  Akbashev / Sidristij / ??? -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            13<sup>30</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/akbashev-mini.png"/></td>
+                                        <td class="author">Александр Акбашев</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Старший специалист по тестированию в компании HERE</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Гоняем тесты на каждый билд: Gerrit, Jenkins, Docker, AWS
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        В своём докладе я буду рассказывать о том, как можно настроить CI таким образом,
+                                        чтобы не приходилось бегать за девелоперами с клюшкой и "просить" починить билд.
+                                        В HERE ежедневно мы запускаем порядка 60к билдов, большая часть всех тестов запускается для каждого изменения в коде.
+                                        Мы используем Gerrit, Jenkins, Docker и облачные сервисы Amazon
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                        <td class="author">Станислав Сидристый</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Грамотное использование Groovy/Geb при автоматизации тестирования Web-приложений на Java
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        За время работы отдела автоматизации были выработаны отличные подходы к стандартизации кода.
+                                        Также был разработан фреймворк поверх Geb, которые добавляет супер-фичи, делающие автоматизацию дешевым процессом
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            13<sup>30</sup>
+                        </td>
+                    </tr>
+
+                    <!--  14:20 - 15:10  LUNCH -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            14<sup>20</sup>
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="cross-row-header">
+                            Обед
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="table-cell"></td>
+                        <td class="time-column">
+                            14<sup>20</sup>
+                        </td>
+                    </tr>
+
+                    <!--  15:10 - 16:00  Iovlev / ??? / Scheglovitov -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            15<sup>10</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/riovlev-mini.png" /></td>
+                                        <td class="author">Роман Иовлев</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Руководитель отдела тестирования в EPAM</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Jedi Power of Model-based testing
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Обзор эволюции тестировщика-автоматизатора от Junior (Padavan) до Master (Jedi Master).
+                                        Что такое тестирование с использованием моделей? Какие профиты, тонкости ипроблемы у этого подхода?
+                                        Как эти проблемы решать используя микро-модели?
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/scheglovitov-mini.png" /></td>
+                                        <td class="author">Игорь Щегловитов</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Старший инженер по тестированию в Kaspersky Lab</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Автоматизированное тестирование с Microsoft
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        В докладе будут рассмотрены новейшие инструменты Microsoft способные упростить и одновременно улучшить ваш существующий процесс тестирования.
+                                        В частности - контролируемые среды Azure и фреймворк IntelliTest
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            15<sup>10</sup>
+                        </td>
+                    </tr>
+
+                    <!--  16:10 - 17:00  Iovlev / Shapovalov / Neradovskij -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            16<sup>10</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/riovlev-mini.png" /></td>
+                                        <td class="author">Роман Иовлев</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Руководитель отдела тестирования в EPAM</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        JDI - Future of UI Automation
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Презентацию нашей новой разработки - Фреймворка для автоматизации тестирования UI. JDI.
+                                        Это продолжение идей Yandex Html Elements, но с рядом существенных отличий в лучшую сторону
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/neradovskiy-mini.png" /></td>
+                                        <td class="author">Константин Нерадовский</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Automation Technologies<br>Advocate</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Функциональный подход в разработке автотестов на Java
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        В докладе будет показано как можно применить функциональный подход Java8 в разработке автотестов,
+                                        чтобы сделать их стабильными, предсказуемыми и красивыми.  Избавим от NPE и научим использовать
+                                        собственные проверки в ожиданиях и  ассертах
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            16<sup>10</sup>
+                        </td>
+                    </tr>
+
+                    <!--  17:20 - 17:50  CAFE-BREAK -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            17<sup>00</sup>
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="cross-row-header">
+                            Кофе-брейк<br><span class="cross-row-header-description">общение со спикерами</span>
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="table-cell"></td>
+                        <td class="time-column">
+                            17<sup>00</sup>
+                        </td>
+                    </tr>
+
+                    <!--  17:30 - 18:20  ??? / Sidristij / Vasiliev -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            17<sup>30</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                        <td class="author">Станислав Сидристый</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Переносим принципы GOF на рельсы автоматизации
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Следуя шаблонам GOF в программировании, я составил аналогичный набор правил для написания тестов BDD,
+                                        чтобы сделать иъ проще, понятнее для любого внешнего автоматизатора и чище. Также этими правилами легко
+                                        пользоваться на сode review чтобы контролировать чистоту проекта
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" /></td>
+                                        <td class="author">Егор Васильев</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Переносим принципы GOF на рельсы автоматизации
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                        Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <!--<table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                        <td class="author">Станислав Сидристый</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Переносим принципы GOF на рельсы автоматизации
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                        Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                                -->
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            17<sup>30</sup>
+                        </td>
+                    </tr>
+
+                    <!--  18:30 - 19:20  ??? / ??? / ??? -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            18<sup>30</sup>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/anon-mini.png" style="opacity: 0.3;"/></td>
+                                        <td class="author">Неизвестный докладчик</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Любит тестирование и<br>делиться опытом</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Доклад по нагрузочному, интеграционному тестированию, тестированию на проникновение
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Это место пока ни за кем не занято. Если вы хотите сделать доклад,
+                                        смело пишите к нам на почту: <a href="mailto:hello@qaconf.ru">hello@qaconf.ru</a>
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td class="table-cell">
+                            <div class="card">
+                                <!--<table class="card-table">
+                                    <colgroup>
+                                        <col class="card-first-column" />
+                                    </colgroup>
+                                    <tbody>
+                                    <tr class="card-header">
+                                        <td rowspan="2"><img src="img/sidristyi-mini.png" /></td>
+                                        <td class="author">Станислав Сидристый</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="author-desc">Автоматизация .NET/Java решений компании Luxoft</td>
+                                    </tr>
+                                    <tr><td colspan="2" class="presentation-title">
+                                        Переносим принципы GOF на рельсы автоматизации
+                                    </td></tr>
+                                    <tr><td colspan="2" class="presentation-descr">
+                                        Регрессионная тестовая модель – очень дорогая вещь для тестирования, причем во всех отношения.
+                                        Как подойти к ее созданию? Как управлять регрессионной тестовой модель? Можно и нужно считать и использовать риски
+                                    </td></tr>
+                                    </tbody>
+                                </table>
+                                -->
+                                <div class="tbd">TBD</div>
+                            </div>
+                        </td>
+                        <td class="time-column">
+                            18<sup>30</sup>
+                        </td>
+                    </tr>
+
+                    <!--  19:20  FINISH -->
+                    <tr class="short-row">
+                        <td class="time-column">
+                            19<sup>20</sup>
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="cross-row-header">
+                            Закрытие конференции
+                        </td>
+                        <td class="table-cell"></td>
+                        <td class="table-cell"></td>
+                        <td class="time-column">
+                            19<sup>20</sup>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -911,8 +1828,18 @@
         $bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
     }
 
-    resizeBg();
+    function showCity(city) {
+        $('.omsk,.msk,.nsk,.eka,.spb').css({'display':'none'});
+        $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+        $('#'+city+'-link').addClass('choosed');
+        $('.'+city).css({'display':'block'});
+        resizeBg();
+    }
 
+    resizeBg();
+    $('#msk-link').on('click', function(){ showCity('msk'); });
+    $('#spb-link').on('click', function(){ showCity('spb'); });
+    showMoscowOnly();
     $(window).load(function() {
         theWindow.resize(resizeBg).trigger("resize");
     });

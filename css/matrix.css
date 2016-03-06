@@ -143,7 +143,12 @@ a.choosed {
 }
 
 .time-column {
-    width: 200px;
+    width: 100px;
+}
+
+.time-column-last {
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .first-column, .second-column, .third-column, .fourth-column {
