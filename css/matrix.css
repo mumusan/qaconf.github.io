@@ -76,42 +76,6 @@ a.choosed {
     text-decoration-style: double;
 }
 
-#omsk-link, #eka-link, #nsk-link {
-    color: gray;
-}
-/*
-@media (max-width: 1200px) {
-
-    #matrix_tables {
-        top: 160px;
-    }
-
-    #matrix_title {
-        height: 130px;
-        text-align: center;
-    }
-
-    #matrix_title .title {
-        font-size: 50pt;
-        font-weight: 700;
-        width: 100%;
-        bottom: 30px;
-    }
-
-    #matrix_title > .cities {
-        position: absolute;
-        font-size: 16pt;
-        font-weight: 300;
-        left: 0px;
-        bottom: 0px;
-    }
-
-    #matrix_title > .cities a {
-        font-size: 16pt;
-    }
-}
-*/
-
 #matrix_table {
     width: 100%;
     heihgt: auto;
@@ -137,6 +101,12 @@ a.choosed {
 .tbd {
     text-align: center;
     font-size: 50pt;
+    font-weight: 200;
+    vertical-align: middle;
+}
+.talks {
+    text-align: center;
+    font-size: 35pt;
     font-weight: 200;
     vertical-align: middle;
 }
