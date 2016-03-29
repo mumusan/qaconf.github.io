@@ -173,6 +173,7 @@ tr.short-row {
 /* CARD */
 table.card-table {
     padding: 0px;
+    width: 100%;
     text-align: left;
     font-size: 15pt;
     table-layout: fixed;
