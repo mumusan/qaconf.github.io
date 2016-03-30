@@ -155,6 +155,12 @@ a.choosed {
     margin: 0px;
 }
 
+.date-desc {
+    font-size: 17pt;
+    font-weight: 200;
+    margin: 0px;
+}
+
 tr.short-row {
     height: 120px;
 }
