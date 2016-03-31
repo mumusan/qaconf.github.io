@@ -46,8 +46,8 @@
                 */
                 /*
                 var disqus_config = function () {
-                this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                this.page.url = 'http://qaconf.ru/online.html'; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = ''; //'4708262653'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
                 */
                 (function() { // DON'T EDIT BELOW THIS LINE
@@ -58,6 +58,16 @@
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();
+
+                setInterval(function() {
+                DISQUS.reset({
+                  reload: true,
+                  config: function () {
+                        page.url = 'http://qaconf.ru/online.html'; // Replace PAGE_URL with your page's canonical URL variable
+                        page.identifier = ''; //'4708262653'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  }
+                });
+                }, 15000);
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
             </div>
