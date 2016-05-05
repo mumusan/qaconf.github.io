@@ -119,7 +119,7 @@
     font-weight: 500;
 }
 
-.city-descr .city-go  {
+.city-descr .city-go, .city-go-d  {
     display: inline-block;
     width: 200px;
     height:100%;
@@ -130,7 +130,7 @@
     font-weight: 500;
 }
 
-.city-go a {
+.city-go a, .city-go-d a {
     display: block;
     float: left;
     background-color: #e37c00;
@@ -138,6 +138,11 @@
     height:50px;
     line-height: 50px;
     text-align: center;
+}
+
+.city-go-d a {
+    background-color: #333333;
+    color: gray;
 }
 
 @media (max-width: 1200px) {
