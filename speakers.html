@@ -5,83 +5,677 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=1000">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/highlight.css">
+    <link rel="stylesheet" href="css/speakers.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<img id="qaclogo" src="img/qac_mini.png"/>
-		<div class="menu">
-			<div><a href="index.html">О конференции</a></div>
-			<div><a href="speakers.html">Спикеры</a></div>
-			<div>Сессии</div>
-			<div>Контакты</div>
-			<div class="register_button">РЕГИСТРАЦИЯ</div>
-		</div>
-	</div>
+    <div id="header">
+        <img id="qaclogo" src="img/qac_mini.png"/>
+        <div class="menu">
+            <div><a href="index.html">О конференции</a></div>
+            <div><a href="speakers.html">Спикеры</a></div>
+            <div><a href="matrix.html">Доклады</a></div>
+            <!--<div>Контакты</div> -->
+            <a href="register.html" class="register_button">РЕГИСТРАЦИЯ</a>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
 	<div id="page">
 		<div id="speakers">
-			<div id="speakers_bg"><img id="speakers_background" class="bgwidth" src="img/listeners.jpg"/></div>
+            <!-- Fullsize invisible copy of background to have its size -->
+			<img id="bg_sizes" class="invisible" src="img/listeners.jpg"/>
+
+            <!-- Real background, with is controlled by JS code (see it at the end of doc  -->
+            <!-- Should to know speakers count at all cities to have one size of BG at all cities -->
+			<div id="speakers_bg"></div>
+
+            <!-- Speakers table -->
 			<div class="content">
-				<div class="title">СПИКЕРЫ</div>
-				<div class="cities">
-					<div>Москва</div>
-					<div>Санкт-Петербург</div>
-					<div>Омск</div>
-					<div>Екатеринбург</div>
-					<div>Новосибирск</div>
-				</div>
-				<div class="speakers_tables">
-					<table>
-						<tbody>
-							<tr>
-								<td class="company_logo"><img src="img/kaspersky.png"/></td>
-								<td class="company_logo"><img src="img/db.png"/></td>
-								<td class="company_logo"><img src="img/luxoft.png"/></td>
-								<td class="company_logo"><img src="img/kaspersky.png"/></td>
-								<td class="company_logo"><img src="img/db.png"/></td>
-								<td class="company_logo"><img src="img/luxoft.png"/></td>
-							</tr>
-							<tr>
-								<td class="speaker_avatar"><img src="img/sidristy.png"/></td>
-								<td class="speaker_avatar"><img src="img/namestnikov.png"/></td>
-								<td class="speaker_avatar"><img src="img/chumakin.png"/></td>
-								<td class="speaker_avatar"><img src="img/sidristy.png"/></td>
-								<td class="speaker_avatar"><img src="img/namestnikov.png"/></td>
-								<td class="speaker_avatar"><img src="img/chumakin.png"/></td>
-							</tr>
-							<tr>
-								<td class="company_description">Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира</td>
-								<td class="company_description">Luxoft - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников</td>
-								<td class="company_description">Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию</td>
-								<td class="company_description">Kaspersky Lab - международная компания, cпециализирующаяся на разработке систем защиты от компьютерных вирусов, спама, хакерских атак и прочих киберугроз. Компания ведёт свою деятельность более чем в 200 странах и территориях мира</td>
-								<td class="company_description">Luxoft - международная компания, занимающаяся разработкой программного обеспечения и экспортом ИТ-услуг, в которой работает более 10 000 сотрудников</td>
-								<td class="company_description">Deutsche Bank -  универсальный, один из 29 важнейших транснациональных банков по данным Совета по финансовой стабильности. Он включает коммерческие, ипотечные, инвестиционные банки, и проч. 28 миллионов клиентов, 2814 отделений. Имеет собственные технологические центры, в которых работают тысячи программистов и специалистов по тестированию</td>
-							</tr>
-						</tbody>
-					</table>
+				<div id="speakers_title">
+                    <div class="title">ДОКЛАДЧИКИ</div>
+                    <div class="cities">
+                        <a id="msk-link" class="choosed" href="#">Москва</a>
+                        <a id="spb-link" href="#">Санкт-Петербург</a>
+                        <a id="omsk-link" href="#">Омск</a>
+                        <a id="eka-link" href="#">Екатеринбург</a>
+                        <a id="nsk-link" href="#">Новосибирск</a>
+                    </div>
+                </div>
+				<div id="speakers_tables">
+                    <div class="speaker_entry msk nsk">
+                        <div class="company">
+                            <img src="img/sber.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/ggalkina.png"/>
+                        </div>
+                        <div class="person">
+                            Галина<br>Галкина
+                        </div>
+                        <div class="about">
+                            Начальник Управления тестирования банковских систем <span class="company_bold">Сбербанк Технологии</span>. В тестировании с 2002 года. Работала в «гигантах» ИТ телекома и банкинга: CBOSS, Luxoft, Ситроникс Телеком Солюшнс. Прошла профессиональный путь от «работы руками» до выстраивания работы команд/подразделений
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk eka nsk">
+                        <div class="company">
+                            <img src="img/luxoft.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/sidristyi.png"/>
+                        </div>
+                        <div class="person">
+                            Станислав<br>Сидристый
+                        </div>
+                        <div class="about">
+                            Архитектор решений компании <span class="company_bold">Luxoft</span>. Участвовал в многих проектах компании, занимался как разработкой, так и автоматизацией тестирования как .NET/WPF приложений, так и Java/Groovy Web приложений. Разрабатывал для огромного спектра платформ, руководил как разработкой так и тестированием
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk eka">
+                        <div class="company">
+                            <img src="img/pentestit.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/rr.png"/>
+                        </div>
+                        <div class="person">
+                            Роман<br>Романов
+                        </div>
+                        <div class="about">
+                            Генеральный директор компании <span class="company_bold">Pentestit</span>, сертифицированный специалист в области обеспечения безопасности информационных систем, докладчик на международных конференциях. Топ-эксперт Института Развития Интернета (секция "информационная безопасность")
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk eka">
+                        <div class="company">
+                            <img src="img/pentestit.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/lsafonov.png"/>
+                        </div>
+                        <div class="person">
+                            Лука<br>Сафонов
+                        </div>
+                        <div class="about">
+                            Технический директор компании <span class="company_bold">Pentestit</span>, автор многочисленных докладов и исследований в области практической информационной безопасности, докладчик на международных форумах и конференциях. Имеет более 10 лет практического опыта тестирования на проникновение информационных систем государственного, финансового и e-commerce секторов. Эксперт Института Развития Интернета (секция "информационная безопасность")
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb nsk">
+                        <div class="company">
+                            <img src="img/epam.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/riovlev.png"/>
+                        </div>
+                        <div class="person">
+                            Роман<br>Иовлев
+                        </div>
+                        <div class="about">
+                            Chief QA Automation и евангелист в компании <span class="company_bold">EPAM</span>. Посчастливилось поучаствовать в различных конференциях таких как SQA Days, Agile Days, IT Week, IT Subbotnik и EuroStar. Автор фреймворка для автоматизированного тестирования VIQA и набора утилит для DDT (VIQA TDG - test data generator)
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk nsk">
+                        <div class="company">
+                            <img src="img/rmbit.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/Ogorodnikov.png"/>
+                        </div>
+                        <div class="person">
+                            Евгений<br>Огородников
+                        </div>
+                        <div class="about">
+                            Инженер с богатым опытом поднятия процессов тестирования и автоматизации тестирования. Участвовал в создании, тестировании и выпуске высоконагруженных приложений для различных заказчиков - от Ericson'а до МинЗдрава РФ, руководитель отдела тестирования
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/here.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/akbashev.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Акбашев
+                        </div>
+                        <div class="about">
+                            Старший специалист по тестированию в компании <span class="company_bold">HERE</span> - ведущем провайдере карт. Сервера компании ежедневно (!) прогоняют свыше 60 тысяч билдов - для всех клиентов, на различных операционных системах, под управлением единой системы контроля автоматизации тестирования
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/yandex.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/lavrenuk.png"/>
+                        </div>
+                        <div class="person">
+                            Алексей<br>Лавренюк
+                        </div>
+                        <div class="about">
+                            В <span class="company_bold">Яндексе</span> 4 года, занимается нагрузочным тестированием, разработкой инструментов и экспериментами в области производительности. Ведет open-source проекты <a href="https://github.com/yandex/yandex-tank">Яндекс.Танк</a> и <a href="https://github.com/yandex/pandora">Pandora</a>
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/virtuozzo.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/antyshev.png"/>
+                        </div>
+                        <div class="person">
+                            Евгений<br>Антышев
+                        </div>
+                        <div class="about">
+                            Ведущий инженер по тестированию в компании <span class="company_bold">Virtuozzo (бывшая Parallels)</span> - ведущем разработчике в области контейнерной виртуализации. Работал вплотную с такими инфраструктурными проектами Openstack которые могут потенциально быть полезны для развертывания CI систем: Zuul, Nodepool, diskimage-builder
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb">
+                        <div class="company">
+                            <img src="img/kaspersky.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/scheglovitov.png"/>
+                        </div>
+                        <div class="person">
+                            Игорь<br>Щегловитов
+                        </div>
+                        <div class="about">
+                            Ведущий инженер в Лаборатории Касперского и Microsoft ALM Ranger. Занимается разработкой автоматизированных тестов на .NET. Был спикером на ключевых конференциях Microsoft. Написал множество статей по тестированию  (статьи на Habr можно найти по тегу #mstesting)
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk nsk">
+                        <div class="company">
+                            <img src="img/sber.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/neradovskiy.png"/>
+                        </div>
+                        <div class="person">
+                            Константин<br>Нерадовский
+                        </div>
+                        <div class="about">
+                            Основное мое достижение - это то, что автоматизация стала пользоваться спросом со стороны отделов и управлений функционального тестирования. Разработанная при моем непосредственном участии новая технологическая платформа - BDD автотесты, java, selenium, appium, позволила значительно ускорить выполнение автотестов, снизить затраты на поддержку и самое главное - она удобна в использовании ручными тестировщиками
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/epam.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/pirogov.png"/>
+                        </div>
+                        <div class="person">
+                            Сергей<br>Пирогов
+                        </div>
+                        <div class="about">
+                            Работал на различных проектах: системы управления рисками, торговые платформы для больших банков и eCommerce решения для больших торговых платформ. Имею большой опыт работы с BDD инструментами, такими как JBehave, Cucumber. Выступаю в качестве ментора и лектора на различных мероприятиях. Выступал в качестве докладчика на QAFest 2015
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/cifratech.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/aivanov.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Иванов
+                        </div>
+                        <div class="about">
+                            Старший инженер по интеграции системы условного доступа (СУД) в ПО сторонних разработчиков. Подготовил к сертификации не менее 25 принципиально разных модификаций приемников. Сертифицировал не менее 50 релизов для них. Занимается ручным и автоматизированным тестированием. Организовал и начал внедрять автоматизацию тестирования приёмников. Участник нескольких ИТ конференций, а также международных выставок в области телекоммуникаций
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk eka">
+                        <div class="company">
+                            <img src="img/dins.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/akmaev.png"/>
+                        </div>
+                        <div class="person">
+                            Дмитрий<br>Акмаев
+                        </div>
+                        <div class="about">
+                            В настоящий момент управляет и развивает проект Global Continues Integration. В тестировании 12 лет. Работал в компаниях: Quest Software (Dell), I-Free, с 2011 года работает в Dino Systems (DINS). Приходилось использовать практически все методы тестирования, включая исследовательское, тестирование производительности и даже мутационное. Не обошлось и без создания своих Frameworks
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk eka">
+                        <div class="company">
+                            <img src="img/cit.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/mahetov.png"/>
+                        </div>
+                        <div class="person">
+                            Сергей<br>Махетов
+                        </div>
+                        <div class="about">
+                            Ведущий специалист по тестированию компании Центр информационных технологий. Специализируется на тестировании интеграционных шин для организации внутриведомственного, межведомственного, а также для межгосударственного электронного взаимодействия, в том числе в части вопросов безопасности, отказоустойчивости и производительности
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb">
+                        <div class="company">
+                            <img src="img/juno.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/chumakin.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Чумакин
+                        </div>
+                        <div class="about">
+                            Ведущий специалист по автоматизированному тестированию в компании Juno. Прекрасно владеет и обладает обширным багажом знаний в инструментах: Selenium Webdriver, Ranorex, Sikuli, AutoIt, Sahi, Cucumber, Robot Framework и множеством других инструментов для автоматизированного тестирования Web, Desktop, Java, DB, back-end, performance приложений
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <!--<img src="img/juno.png"/>-->
+                        </div>
+                        <div class="photo">
+                            <img src="img/gainutdinova.png"/>
+                        </div>
+                        <div class="person">
+                            Екатерина<br>Гайнутдинова
+                        </div>
+                        <div class="about">
+                            Консультант по тестированию. Разрабатывала миссию отдела тестирования, формировала команды тестирования и работу в компании, мной было запущено 3 отдела тестирования, и сейчас я работаю над 4.
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/trk.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/yan.png"/>
+                        </div>
+                        <div class="person">
+                            Ян<br>Алексеенко
+                        </div>
+                        <div class="about">
+                            Руководитель отдела обеспечения качества СПО. За 9 лет получил опыт ручного тестирования, автоматизации, performance/load, usability, penetration и прочих видов тестирования. Обучал персонал автоматизации. Построил отдел тестирования с нуля, который с успехом справляется с задачами и приносит большую пользу компании. Параллельно с этой областью вот уже 5 лет занимаюсь разработкой професионального ПО для радиолюбителей Zeus Radio
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/neoflex.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/bobkov.png"/>
+                        </div>
+                        <div class="person">
+                            Михаил<br>Бобков
+                        </div>
+                        <div class="about">
+                            Исполняет роль архитектора на интеграционных проектах. Последние несколько лет работает над одним из крупнейших интеграционных проектов УСБС. Является идейным вдохновителем и архитектором системы для автоматизации тестирования интеграционных проектов
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk eka">
+                        <div class="company">
+                            <img src="img/tamtek.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/bobrova.png"/>
+                        </div>
+                        <div class="person">
+                            Екатерина<br>Боброва
+                        </div>
+                        <div class="about">
+                            Ведущий инженер по тестированию компании Тамтэк. Занимается автоматизированным тестированием backend проектов и проектов со сложной структурой. Отвечает за полное сопровождение автоматизации, начиная от детализации требований и заканчивая настройкой CI, обучает стажеров
+                        </div>
+                    </div>
+                    <div class="speaker_entry nsk">
+                        <div class="company">
+                            <img src="img/magora.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/martinov.png"/>
+                        </div>
+                        <div class="person">
+                            Константин<br>Мартынов
+                        </div>
+                        <div class="about">
+                            Стаж работы в тестировании 3 года. Последние полгода заинтересовался автоматизацией. За это недолгое время принял участие в постановке процесса автоматизированного тестирования. Успешно развернул автоматизацию на 4х зарубежных проектах. На данный момент принимает участие в дальнейшей разработке и поддержке тестового фреймворка
+                        </div>
+                    </div>
+                    <div class="speaker_entry nsk">
+                        <div class="company">
+                            <img src="img/magora.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/macivecky.png"/>
+                        </div>
+                        <div class="person">
+                            Михаил<br>Мациевский
+                        </div>
+                        <div class="about">
+                            Бывший C# Dev, ныне переквалифицировался в специалиста тестирования. Привёл в порядок существующий, структурировал и разработал собственный фреймворк работы, основанный на Selenium и Selenide.Поднял полную схему автоматизации (Github, bitbucket репозитории -> CIS(teamcity, Jenkins) -> Testlink -> отчёт на почте с результатами).
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/radioqa.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/vinogradov.png"/>
+                        </div>
+                        <div class="person">
+                            Алексей<br>Виноградов
+                        </div>
+                        <div class="about">
+                            Работает в IT проектах в Германии более 15 лет. Консультирует по вопросам тестирования и автоматизации. Младший разработчик фреймворка Selenide. Основатель и один из ведущих подкаста Radio QA
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/automatica.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/orekhov.png"/>
+                        </div>
+                        <div class="person">
+                            Алексей<br>Орехов
+                        </div>
+                        <div class="about">
+                            Занимался нагрузочным и автоматизированным тестированием всех типов приложений. Сейчас занимаю должность ведущего инженера по автоматизированному тестированию в компании Acumatica
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb eka">
+                        <div class="company">
+                            <img src="img/hobout.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/vasiliev.png"/>
+                        </div>
+                        <div class="person">
+                            Егор<br>Васильев
+                        </div>
+                        <div class="about">
+                            В тестировании более четырех лет. В настоящий момент работает в компании Hobout, где занимается тестированием как frontend, так и backend. Прежде работал в компании YotaDevices, где участвовал в запуске YotaPhone первого и второго поколения, там и приобрел навыки разработки под операционную систему Android.
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb msk">
+                        <div class="company">
+                            <img src="img/db.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/manushin.png"/>
+                        </div>
+                        <div class="person">
+                            Игорь<br>Манушин
+                        </div>
+                        <div class="about">
+                            Разработчик под .Net/Java/Sql, преимущественно под Windows платформы. Участвовал в создании как клиентских, так и серверных проектов. Автор ряда статей и Open Source решений для программистов и тестировщиков-автоматизаторов
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/odin.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/shapovalov.png"/>
+                        </div>
+                        <div class="person">
+                            Евгений<br>Шаповалов
+                        </div>
+                        <div class="about">
+                            5 лет в QA: от manual до team lead позиции. Принимал участие в разработке стратегии тестирования практически всех серверных и провайдерских решений компании Parallels/Virtuozzo/Odin. Сейчас занимаюсь разработкой Odin Essentials, специализируюсь на VPS hosting и IaaS.
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <img src="img/odin.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/shnyakin.png"/>
+                        </div>
+                        <div class="person">
+                            Алексей<br>Шнякин
+                        </div>
+                        <div class="about">
+                            SSDET. 2 года в автоматизации, начинал с серверных решений компании Parallels. Сейчас разрабатывает процесс автоматизированного тестирования продукта Odin Essentials по методологии BDD
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb msk nsk">
+                        <div class="company">
+                            <img src="img/ati.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/orlov.png"/>
+                        </div>
+                        <div class="person">
+                            Артур<br>Орлов
+                        </div>
+                        <div class="about">
+                            Специализировался на создании автоматизированных систем промышленного и производственного назначения: автоматизация производства печатных изданий, автоматизированные системы учета электроэнергии, embedded-решения. В настоящее время руковожу разработкой системы электронного документооборота, спроектировал и внедрил систему автоматизированного тестирования на основе selenium.
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb msk nsk">
+                        <div class="company">
+                            <img src="img/ati.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/lenshmidt.png"/>
+                        </div>
+                        <div class="person">
+                            Анастасия<br>Леншмидт
+                        </div>
+                        <div class="about">
+                            Занимается ручным тестированием, разработкой/поддержкой/внедрением автотестов на 2х проектах. Принимала участие в конференциях в качестве докладчика на SQA Days
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk spb omsk nsk eka">
+                        <div class="company">
+                            <img src="img/performancelab.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/efremova.png"/>
+                        </div>
+                        <div class="person">
+                            Дарья<br>Ефремова
+                        </div>
+                        <div class="about">
+                            Заместитель руководителя направления функционального тестирования в <i>Перфоманс Лаб</i>
+                        </div>
+                    </div>
+                    <div class="speaker_entry msk">
+                        <div class="company">
+                            <!--<img src="img/scalaschmidt.png"/>-->
+                        </div>
+                        <div class="photo">
+                            <img src="img/shmidt.png"/>
+                        </div>
+                        <div class="person">
+                            Slava<br>Schmidt
+                        </div>
+                        <div class="about">
+                            Developer with programming experience over two decades. Currently working as a Scala coach, helping newly formed Scala teams to get on track easily and quickly
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/cloudbees.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/nenashev.png"/>
+                        </div>
+                        <div class="person">
+                            Олег<br>Ненашев
+                        </div>
+                        <div class="about">
+                            Jenkins Developer в компании CloudBees, член core team в open-source проекте Jenkins.
+
+                            C 2008 года занимается автоматизацией и инфраструктурой для крупных программно-аппаратных проектов.
+                            Работал в Intel, Sitronics и Synopsys.
+                            Сейчас развивает CloudBees Jenkins Platform - enterprise-решение на базе Jenkins.
+
+                            В проекте Jenkins занимается развитием ядра и сообщества, поддерживает около 15 плагинов.
+                            Организует митапы по Jenkins в Санкт-Петербурге и Москве.
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/ict.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/shonichev.png"/>
+                        </div>
+                        <div class="person">
+                            Макс<br>Шоничев
+                        </div>
+                        <div class="about">
+                            Ведущий инженер по тестированию в ЗАО "Институт Сетевых Технологий". Последние несколько лет активно занимаюсь тестированием телефонии. Использую в качестве дестрибутива AstraLinux, тестирую как GUI так и серверные части. До этого занимался разработкой
+                        </div>
+                    </div>
+                    <div class="speaker_entry spb">
+                        <div class="company">
+                            <img src="img/luxoft.png"/>
+                        </div>
+                        <div class="photo">
+                            <img src="img/shipovalov.png"/>
+                        </div>
+                        <div class="person">
+                            Александр<br>Шиповалов
+                        </div>
+                        <div class="about">
+                            С 2013 г. работает в Luxoft, где активно применяет инженерные практики в тестировании, разрабатывает и воплощает в жизнь стратегии автоматизированного и нагрузочного тестирования. Кроме того, Александр консультирует и обучает автоматизированному и нагрузочному тестированию, читает лекции по тестированию ПО студентам ОмГУ, активно участвует в профессиональных конференциях.
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
-	$(window).load(function() {    
 
-        var theWindow        = $(window),
-            $bg              = $("#speakers_background"),
-            aspectRatio      = $bg.width() / $bg.height();
+			var theWindow    = $(window),
+				$bg          = $("#speakers_bg"),
+				moscow_sizes = $('#bg_sizes'),
+				description  = $('.description > p');
 
-        function resizeBg() {
-                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-                    $bg.removeClass().addClass('bgheight');
-                } else {
-                    $bg.removeClass().addClass('bgwidth');
+            function placeBackgroundOnScroll(){
+                var $bgobj = $(this); // создаем объект
+                theWindow.scroll(function() {
+                    var yPos = -(theWindow.scrollTop() / theWindow.height() * ($bgobj.height()-200)/2); // вычисляем коэффициент
+                    // Присваиваем значение background-position
+                    var coords = 'center '+ yPos + 'px';
+                    // Создаем эффект Parallax Scrolling
+                    $bgobj.css({ backgroundPosition: coords });
+                });
+            }
+
+			function resizeBg() {
+
+				var window_width  = theWindow.width(),
+                    window_height = theWindow.height(),
+                    bg_width = moscow_sizes.width(),
+                    bg_height = moscow_sizes.height();
+
+				var wdiff = Math.max(window_width, 1024) / bg_width;
+				var hdiff = Math.max(window_height, 800) / bg_height;
+				var ratio = Math.max(wdiff, hdiff);
+
+				var newWidth = Math.min(bg_width * ratio, window_width);
+				var newHeight = Math.min(bg_height * ratio, window_height);
+
+				// растянуть по вертикали, по горизонтали сцентровать
+				$bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
+
+                // поставить на места таблицу спикеров
+                var speakers = $("#speakers_tables");
+                var entries = $(".speaker_entry:visible");
+
+                var num_per_row = Math.floor(speakers.width() / 210);
+                var entries_width = (speakers.width() / num_per_row) - 25; // 25 - margins + space
+                var rows = Math.floor(entries.size() / num_per_row);
+                entries.width(entries_width);
+
+                var row = 0, current = 0;
+
+                // let browser reset heights
+                entries.height('auto');
+
+                // calculate new
+                for(row = 0; (row < rows) && (current < entries.size()); row++)
+                {
+                    var hh = 0, tmpcur = current;
+                    for(var col = 0; (col < num_per_row) && (tmpcur < entries.size()); col++)
+                    {
+                        hh = Math.max(hh, $(entries[tmpcur]).height());
+                        tmpcur++;
+                    }
+                    tmpcur = current;
+                    for(col = 0; (col < num_per_row) && (tmpcur < entries.size()); col++)
+                    {
+                        $(entries[tmpcur]).height(hh);
+                        tmpcur++;
+                    }
+                    current = tmpcur;
                 }
-        }
 
-        theWindow.resize(resizeBg).trigger("resize");
+        	}
 
-	});
+            function showMoscowOnly() {
+                $('.omsk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#msk-link').addClass('choosed');
+                $('.msk').css({'display':'block'});
+                resizeBg();
+            }
+
+            function showSpbOnly() {
+                $('.omsk,.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#spb-link').addClass('choosed');
+                $('.spb').css({'display':'block'});
+                resizeBg();
+            }
+
+            function showOmskOnly() {
+                $('.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#omsk-link').addClass('choosed');
+                $('.omsk').css({'display':'block'});
+                resizeBg();
+            }
+
+            function showEkaOnly() {
+                $('.omsk,.msk,.nsk,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#eka-link').addClass('choosed');
+                $('.eka').css({'display':'block'});
+                resizeBg();
+            }
+
+            function showNskOnly() {
+                $('.omsk,.msk,.nsk,.eka,.spb').css({'display':'none'});
+                $('#msk-link,#spb-link,#omsk-link,#nsk-link,#eka-link').removeClass('choosed');
+                $('#nsk-link').addClass('choosed');
+                $('.nsk').css({'display':'block'});
+                resizeBg();
+            }
+
+            $('#speakers_tables').css({"display":"block"});
+            $('#msk-link').on('click', showMoscowOnly);
+            $('#spb-link').on('click', showSpbOnly);
+            $('#omsk-link').on('click', showOmskOnly);
+            $('#nsk-link').on('click', showNskOnly);
+            $('#eka-link').on('click', showEkaOnly);
+
+            theWindow.resize(resizeBg).trigger("resize");
+            showMoscowOnly();
+
+        $(window).load(function() {
+            resizeBg();
+		});
+
+        // Google Analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-12938027-10', 'auto');
+        ga('send', 'pageview');
 	</script>
 </body>
 </html>

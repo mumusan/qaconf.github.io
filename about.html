@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>QA: Conference</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="header">
+    <img id="qaclogo" src="img/qac_mini.png"/>
+    <div class="menu">
+        <div><a href="index.html">О конференции</a></div>
+        <div><a href="speakers.html">Спикеры</a></div>
+        <!--<div>Сессии</div>
+         <div>Контакты</div> -->
+        <div class="register_button"><a href="register.html">РЕГИСТРАЦИЯ</a></div>
+    </div>
+</div>
+<div id="page">
+    <div id="index">
+        <!-- fullsize bg to get sizes -->
+        <img id="bg_sizes" class="invisible" src="img/about_bg.jpg"/>
+
+        <!-- page background -->
+        <div id="about_bg"></div>
+
+        <!-- content: conference content -->
+        <div class="content">
+            <div class="contacts">
+                 <table class="list">
+                     <colgroup>
+                         <col width="25%" />
+                         <col width="25%" />
+                         <col width="25%" />
+                         <col width="25%" />
+                     </colgroup>
+                     <tbody>
+                        <tr>
+                         <td>
+                             <div class="contact">
+                                 <p class="big">Директор,<br>билеты, сайт</p>
+                                 <img src="img/sidristyi.png" />
+                                 <p class="big">Сидристый Станислав</p>
+                                 <p>+7 (921) 948-16-08</p>
+                                 <p><a href="mailto:hello@qaconf.ru">hello@qaconf.ru</p>
+                                 <p>skype: <a href="skype:stanislav.sidristyi">stanislav.sidristyi</a></p>
+                             </div>
+                         </td>
+                         <td>
+                             <div class="contact">
+                                 <p class="big"><br>Маркетинг</p>
+                                 <img src="img/salakhetdinova.png" />
+                                 <p class="big">Салахетдинова Диляра</p>
+                                 <p>+7 (XXX) XXX-XX-XX</p>
+                                 <p><a href="mailto:marketing@qaconf.ru">marketing@qaconf.ru</a></p>
+                                 <p>skype: <a href="skype:dilya.salakhetdinova">dilya.salakhetdinova</a></p>
+                             </div>
+                         </td>
+                         <td><div class="contact">
+                                 <p class="big">Маркетинг,<br>материалы</p>
+                                 <img src="img/tiknomirova.png" />
+                                 <p class="big">Тихомирова Анастания</p>
+                                 <p>+7 (XXX) XXX-XX-XX</p>
+                                 <p><a href="mailto:marketing@qaconf.ru">marketing@qaconf.ru</a></p>
+                                 <p>skype: <a href="skype:anastasia.tikhomirova1">anastasia.tikhomirova1</a></p>
+                             </div>
+                         </td>
+                            <td>
+                         <div class="contact">
+                             <p class="big">Гостиницы,<br>кейтеринг</p>
+                             <img src="img/boyarkina.png" />
+                             <p class="big">Бояркина Ольга</p>
+                             <p>+7 (921) 370-72-09</p>
+                             <p><a href="mailto:tickets@qaconf.ru">tickets@qaconf.ru</a></p>
+                             <p>skype: <a href="skype:gasmyasochka">gasmyasochka</a></p>
+                         </div>
+                            </td>
+                        </tr>
+                     </tbody>
+                 </table>
+                <img class="logo" src="img/luxoft.png"/>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var theWindow    = $(window),
+            $bg          = $("#index_bg"),
+            moscow_sizes = $('#moscow_sizes'),
+            description  = $('.description > p');
+
+    function resizeBg() {
+
+        var window_width  = theWindow.width(),
+                window_height = theWindow.height(),
+                bg_width = moscow_sizes.width(),
+                bg_height = moscow_sizes.height();
+
+        var wdiff = Math.max(window_width, 1024) / bg_width;
+        var hdiff = Math.max(window_height, 800) / bg_height;
+
+        var ratio = Math.max(wdiff, hdiff);
+
+        var newWidth = Math.min(bg_width * ratio, window_width);
+        var newHeight = Math.min(bg_height * ratio, window_height);
+
+        // растянуть по вертикали, по горизонтали сцентровать
+        $bg.css({"background-size": bg_width * ratio + "px " + bg_height * ratio + "px"});
+
+    }
+    resizeBg();
+    $(window).load(function() {
+        theWindow.resize(resizeBg).trigger("resize");
+    });
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-12938027-10', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
